@@ -1,0 +1,40 @@
+
+
+.box1 {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--panel-color);
+    border-radius: 20px;
+    box-shadow: none;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 300px;
+}
+
+.box1 .body {
+    line-height: 30px;
+}
+
+.box1 h1 {
+    color: var(--text-color);
+}
+
+
+.content .from {
+    color: var(--black-light-color);
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content .from p {
+    display: flex;
+}
+
+.content .from span.label {
+    text-align: left;
+    font-weight: 400;
+    /* background-color: antiquewhite; */
+    width: 15%;
+}
+

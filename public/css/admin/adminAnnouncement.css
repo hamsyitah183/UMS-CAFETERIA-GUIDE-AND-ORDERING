@@ -1,0 +1,229 @@
+@import url('https://fonts.cdnfonts.com/css/lato');
+
+:root {
+    --primary-color: #FF6347;
+    --panel-color: #fff;
+    --text-color: #666666;
+    --black-light-color: #707070;
+    --border-color: #e6e5e5;
+    --black-light-color: #707070;
+    --toggle-color : #ddd;
+    --box1-color: #D1E8E4;
+    --box2-color: #EAE7C6;
+    --box3-color: #BCCC9A;
+    --title-icon-color: #fff;
+
+    /* transition */
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-02: all 0.2s ease;
+}
+
+.dash-content {
+    margin-bottom: 100px;
+}
+.topContent .form {
+    /* background-color: antiquewhite; */
+    width: 700px;
+    margin: 10px auto;
+    /* text-align: center; */
+}
+
+.topContent .form input[type=text] {
+    width: 450px;
+}
+
+.topContent button[type=submit] {
+    background-color: var(--primary-color);
+}
+
+.announcement {
+    background-color: #F5F5F5;
+    padding: 0 10px;
+    padding-top: 10px;
+    margin-top: 70px;
+    border-radius: 20px;
+}
+
+/* new announcement */
+.newAnnouncement {
+    /* background-color: #666666; */
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    border: 0.5px solid var(--primary-color);
+    border-radius: 20px;
+    margin-top: 30px;
+    /* position: relative; */
+    /* overflow-y: scroll; */
+}
+
+.newAnnouncement #accordion {
+    margin: 0;
+}
+
+.newAnnouncement form {
+    /* background-color: whitesmoke; */
+    width: 80%;
+    margin: 0 auto;
+    /* padding-bottom: 10px; */
+    position: relative;
+    /* overflow-y: scroll; */
+    
+}
+
+.newAnnouncement form input, 
+.newAnnouncement form textarea {
+    border: 1px solid var(--primary-color);
+    resize: none;
+    color: var(--text-color);
+}
+
+
+.newAnnouncement #accordion .content {
+    overflow-y: scroll;
+}
+
+.newAnnouncement h1 {
+    font-size: 30px;
+}
+
+.newAnnouncement tr td:last-child{
+    /* background-color: #BCCC9A; */
+    width: 100%;
+}
+.newAnnouncement tr td input,
+.newAnnouncement tr td textarea
+{
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.newAnnouncement td {
+    border-bottom: none;
+}
+
+
+.newAnnouncement textarea {
+    /* background-color: #BCCC9A; */
+    display: block;
+    width: 100%;
+}
+
+.newAnnouncement .submit {
+    background-color: var(--primary-color);
+    color: var(--panel-color);
+    width:  80px;
+    /* text-align: center; */
+    padding-left: 15px;
+    color: var(--panel-color);
+    border-radius: 20px;
+    position: absolute; 
+    top: 850px;
+    left: 350px;
+
+}
+
+
+
+/* announcement list */
+.announcement .title {
+    margin-top: -10px;
+    margin-left: 20px;
+    color: var(--text-color);
+    font-weight: 500;
+  
+}
+
+.announcementList table {
+    /* background-color: #707070; */
+    padding: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    position: relative;
+}
+
+.announcementList table th,td {
+    /* background-color: #e6e5e5; */
+    border-bottom: 1px solid var(--primary-color);
+    padding: 20px;
+    /* background-color: #707070; */
+    padding-bottom: 20px;
+
+}
+
+.announcementList tbody tr:last-child td {
+    /* background-color: #e6e5e5; */
+    border-bottom: none;
+}
+
+.announcementList table thead {
+    text-align: left;
+}
+
+.announcementList thead tr th:last-child,
+.announcementList tbody tr td:last-child
+{
+    /* background-color: #707070; */
+    text-align: center;
+}
+
+.announcementList table td .activity {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+
+.announcementList table td .activity li {
+    font-weight: 700;
+}
+
+button.submit {
+    color: var(--panel-color);
+}
+
+
+
+@media (max-width: 780px) {
+    
+}
+
+@media (max-width: 560px) {
+    .topContent .form input[type=text] {
+        width: 380px;
+    }
+}
+
+@media (max-width: 500px) {
+    .topContent .form input[type=text] {
+        width: 280px;
+    }
+}
+.dash-content {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+/* pagination */
+
+
+
+
+
+
+#accordion label + input[type="radio"]:checked + .content {
+    max-height: 600px;
+}
+
+

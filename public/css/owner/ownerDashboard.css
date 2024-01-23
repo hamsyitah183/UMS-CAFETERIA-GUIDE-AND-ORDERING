@@ -1,0 +1,593 @@
+/* nav ~ .dashboard {
+    background-color: #faf5f5;
+} */
+
+.line {
+    background-color: rgb(183, 182, 182);
+    height: 1px;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+i.bi-chevron-right {
+    /* background-color: antiquewhite; */
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+
+
+.menu-list, .announcement-list {
+    /* background-color: antiquewhite; */
+ 
+    display:flex;
+    flex-direction: column;
+    gap: px;
+    /* position: absolute; */
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.menu-list a, .announcement-list  a {
+    color: var(--text-color);
+    /* color: aqua; */
+    display: inline-flex;
+    gap: 4px;
+    place-items: center;
+    /* background-color: antiquewhite; */
+    /* justify-content: center; */
+}
+
+.menu-list a.active {
+    color: var(--primary-color);
+}
+
+.menu-list li a {
+    min-width: none;
+}
+
+/* hero */
+.heroes {
+    position: relative;
+}
+.heroes .hero > .img{
+    width: calc(100% - 10px);
+    height: 50vh;
+}
+
+.hero .img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    display: flex;
+    background: rgba(255, 255, 255, 0.595);
+    -webkit-backdrop-filter: blur(32px);
+    backdrop-filter: blur(32px);
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 10px);
+    height: 130px;
+}
+.profile .img {
+    height: 130px;
+    width: 130px;
+    position: relative;
+}
+
+.profile .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+}
+
+.profile .information {
+    /* background-color: aliceblue; */
+   
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.profile .information h1 {
+    color: var(--primary-color);
+}
+
+.profile .information p{
+    width: 50%;
+}
+
+.profile .information2 {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    gap: 5px;
+}
+
+.profile .information2 i{
+    margin-right: 10px;
+}
+
+.profile .information3 .boxes{
+    /* background-color: aqua; */
+    width: 500px;
+    place-content: end;
+    gap: 10px;
+    
+}
+
+.profile .information3 .boxes .box {
+    background-color: var(--primary-color);
+    color: white;
+    width: 20%;
+}
+
+.profile .information3 .boxes .box .number {
+    font-size: 20px;
+    color: white;
+}
+
+.owners {
+    display: flex;
+    /* gap: 20px; */
+    margin-top: 40px;
+}
+
+/* about */
+.about {
+    padding: 10px;
+    background-color: #bccc9a8a;
+    width: 90%;
+    border:0.5px solid rgb(183, 182, 182);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    height: 340px;
+    overflow-x: scroll;
+}
+
+.about img {
+    width: 380px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about p {
+    margin-top: 10px;
+    text-align: justify;
+    width: 400px;
+    font-size: 15px;
+}
+
+/* review */
+.reviews {
+    background-color: var(--box1-color);
+    /* margin-top: 10px; */
+    padding: 10px;
+    width: 90%;
+    border:0.5px solid rgb(183, 182, 182);
+    border-radius: 10px;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.reviews .content {
+    margin-top: 30px;
+}
+
+
+
+.reviews .content .review {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+.reviews .content .review .tops {
+    display: flex;
+
+    gap: 20px;
+}
+
+.reviews .content .review .img {
+    height: 110px;
+    width: 110px;
+    display: flex;
+    place-items: center;
+}
+
+.reviews .content .review .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.reviews .content .review .details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.reviews .content .review .details .info .customer_name{
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+.reviews .content .review .details .info .date {
+    font-size: 14px;
+    color: var(--black-light-color);
+}
+
+.reviews .content .review .details  .comment .rating {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.reviews .content .review .details  .comment .rating .number {
+    color: var(--primary-color);
+    font-size: 40px;
+}
+
+
+.review .bottom .titles h3{
+    font-size: 27px;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+.review .bottom i {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.review .bottom p {
+    /* background-color: antiquewhite; */
+    width: 90%;
+    padding-left: 40px;
+    line-height: 23px;
+}
+
+.review .bottom .ri-double-quotes-r {
+    display: flex;
+    place-content: end;
+    width: 90%;
+}
+
+/* announcement */
+.dash-content .announcement {
+    padding: 10px;
+    width: 80%;
+    background-color: var(--box2-color);
+    border:0.5px solid rgb(183, 182, 182);
+    border-radius: 10px;
+}
+
+.announcement .item {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+.announcement .item .adminProfile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.announcement .item .adminProfile .info {
+    display: flex;
+    gap: 10px;
+}
+
+.announcement .item .adminProfile .info .name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: flex;
+    place-items: center;
+}
+
+.announcement .item .adminProfile .img {
+    width: 80px;
+    height: 80px;
+}
+
+.announcement .item .adminProfile .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.announcement .item .adminProfile .lastUpdate {
+    margin-top: 30px;
+    color: var(--black-light-color);
+}
+
+.announcement .item .itemContent {
+    margin-top: 20px;
+}
+.announcement .item .itemContent .img{
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.announcement .item .itemContent .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.announcement .button {
+    /* position: absolute; */
+    /* top: 100px; */
+    z-index: 99999;
+    display: flex;
+    gap: 10px;
+}
+
+.swiper-button-next,  .swiper-button-prev{
+    background-color: var(--primary-color);
+    color: white !important;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 14px !important;
+}
+
+
+.announcement .itemContent .titles {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.announcement .itemContent .time, .announcement .itemContent .location {
+    text-align: center;
+}
+
+.announcement .itemContent .body {
+    color: var(--black-light-color);
+    /* background-color: aqua; */
+    width: 90%;
+    margin: 20px auto;
+    height: 50px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.announcement .itemContent .time {
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+.announcement .itemContent .location {
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.announcement .read {
+    display: flex;
+    place-content: end;
+    margin-top: 30px;
+}
+
+.announcement .read a {
+    color: var(--primary-color);
+}
+
+
+/* gallery */
+.owners2 {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+}
+.galleries {
+    padding: 10px;
+    background-color: #DCEAC6;
+    width: 60%;
+    border:0.5px solid rgb(183, 182, 182);
+    border-radius: 10px;
+
+}
+
+
+.galleries .gallery .items .item img {
+    width: calc(100% - 50px);
+    height: 420px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.galleries .gallery .items .item .imgDesc {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.galleries .gallery  .swiper-pagination {
+    background-color: #90909086;
+    position: absolute !important;
+    bottom: 60px;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--primary-color) !important;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic 
+.swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic 
+.swiper-pagination-bullet
+{
+    background-color: var(--primary-color);
+}
+
+/* order */
+.order {
+    background-color: var(--box1-color);
+    padding: 10px;
+    border:0.5px solid rgb(183, 182, 182);
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.order table {
+    width: 100%;
+    font-size: 14px;
+}
+
+.order table th, .order table td {
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.order table tbody {
+    text-align: center;
+
+}
+
+
+
+.order table td:first-child {
+    width: 20%;
+}
+
+.order table td:nth-child(2) {
+    width: 20%;
+}
+
+.order table td:nth-child(4) {
+    width: 20%;
+}
+
+.order .customer .img {
+    width: 40px;
+    height: 40px;
+}
+
+.order .customer .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.order .customer {
+    display: flex;
+    gap: 10px;
+    place-items: center;
+    justify-content: center;
+}
+
+/* menu dashboard */
+.dash-content .menu {
+    /* background-color: var(--box2-color); */
+    background-color: #F7F5E5;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border:0.5px solid rgb(183, 182, 182);
+    height: 500px;
+}
+
+.menu .titles {
+    display: flex;
+    gap: 30px;
+    place-items: center;
+}
+
+.menu .body {
+    /* background-color: rgba(255, 255, 255, 0.618); */
+    padding: 10px 30px;
+    height: 400px;
+    margin-bottom: 30px;
+
+}
+
+
+
+.menu .body .menus .contents {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 40px;
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 400px;
+    overflow-y: scroll;
+    padding-bottom: 90px;
+}
+
+.menus .contents .food {
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+}
+
+.menus .contents .food .img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.menus .contents .food .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.menus .contents .food .name {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.menus .contents .food .price {
+    font-weight: 500;
+}
+
+.className {
+    background-color: #F7F5E5;
+}
+
+.slick-prev, .slick-next {
+    background-color: var(--primary-color) !important;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

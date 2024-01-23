@@ -1,0 +1,399 @@
+/* hero */
+.swiper-button-next:after, .swiper-button-prev:after {
+    color: var(--header-color);
+}
+
+.swiper-pagination {
+    /* background-color: indigo; */
+    background-color:rgba(134, 134, 134, 0.493);
+    width: 10% !important;
+    margin: 0 600px !important;
+    margin-top: 100px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--header-color) !important;
+}
+
+
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999999;
+    display: none;
+    /* display: block; */
+    transition: all 100ms ease-in-out;
+
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(0) ;
+    /* transform: translate(-50%, -45%) scale(1); */
+
+    background: #fff;
+    width: 650px;
+    height: 520px;
+    z-index: 999999;
+    /* text-align: center; */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: all 100ms ease-in-out;
+    /* overflow-y: scroll; */
+    position: relative;
+    border-radius: 20px;
+}
+
+.popup .header {
+    /* background-color: aliceblue; */
+    padding: 10px 5px;
+    position: sticky !important;
+    top: 0;
+    box-shadow: none;
+    
+    border-bottom:1px solid rgba(134, 134, 134, 0.493) ;
+}
+
+.popup .information {
+    /* background-color: aliceblue; */
+    height: 400px !important;
+    overflow-y: scroll;
+    padding-bottom: 20px;
+}
+
+.popup .information .description {
+    font-weight: 200;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: var(--header-color);
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.popup .content img {
+    width: 550px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 30px;
+    padding-top: 20px;
+}
+
+.popup .content .btn a{
+   
+    color: #fff;
+}
+
+.popup .content .btn {
+    /* border-top: 1px solid black; */
+    margin-top: 10px;
+}
+
+.popup .content .btn:hover a {
+   
+    color: var(--header-color);
+}
+
+.popup .content .button {
+    padding: 1px 0;
+    border-top:1px solid rgba(134, 134, 134, 0.493) ;
+
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 100ms ease-in-out;
+    transform: translate(-50%, -45%) scale(1);
+
+}
+
+
+
+
+/* hero */
+#orderHero {
+    background-color: antiquewhite;
+    position: relative;
+}
+
+#orderHero .gallery {
+    background-color: aqua;
+    height: 600px;
+}
+
+#orderHero .gallery .image {
+    width: 400px;
+}
+
+#orderHero .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* search */
+
+
+.searchHeader {
+    /* background-color: aquamarine; */
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(134, 134, 134, 0.493);
+    
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    place-items: end;
+    
+
+}
+
+.searchHeader .information {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.searchHeader .information .openingHour,
+.searchHeader .information .address,
+.searchHeader .information .service
+{
+    /* background-color: brown; */
+    /* width: 40%; */
+    display: inline-flex;
+    place-items:  center;
+
+    gap: 10px;
+}
+
+
+
+.searchHeader .information .address
+{
+    width: 60%;
+}
+
+
+.searchHeader h4 {
+    margin-left: 20px;
+    font-size: 30px;
+    width: 40%;
+}
+
+
+.searchs {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    /* margin-top: 20px; */
+}
+.searchs .searchBoxs{
+    /* background-color: bisque; */
+    background-color: var(--bg-color-light);
+    padding-top: 20px;
+    /* width: 250px; */
+    position: relative;
+    /* z-index: 9999; */
+    left: 0;
+    /* top: 0px; */
+    /* top: 400px; */
+    border-right: 1px solid rgba(134, 134, 134, 0.493);
+}
+
+.searchBoxs .searchInput {
+    margin-top: 10px;
+    /* padding-top: 10px; */
+    position: sticky;
+    top: 100px;
+    z-index: 9999;
+    margin-left: 10px;
+}
+
+.searchBoxs .searchInput input[type="text"] {
+    border: none;
+    height: 30px;
+    border-radius: 60px;
+    z-index: 9;
+    padding-left: 10px;
+}
+
+.searchBoxs .searchInput input[type="text"]::placeholder {
+    padding-left: 10px;
+}
+
+
+.searchBoxs .searchInput button {
+    height: 30px;
+    border: none;
+    margin-left: -3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 60px;
+    z-index: 8;
+    cursor: pointer;
+}
+
+
+
+.searchBoxs .searchInput button {
+    /* color: var(---color); */
+    background-color: var(--header-color);
+    color: white;
+    font-weight: 500;
+}
+
+
+.searchBoxs ul {
+    position: sticky;
+    top: 140px;
+    z-index: 99999;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.searchBoxs ul li {
+    padding-top: 20px;
+}
+
+
+
+/* order */
+
+.order {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+.order .foodList{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.order .foodList .foodItem {
+    /* background-color: antiquewhite; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* place-content: center; */
+    place-items: center;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(209,209,209,1);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(209,209,209,1);
+    box-shadow: 0px 4px 5px 0px rgba(209,209,209,1);
+    border-radius: 30px;
+    background-color: white;
+}
+
+.foodList .foodItem .information button, .foodList .foodItem .information .button {
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: var(--header-color);
+    color: #fff;
+}
+
+.foodList .foodItem .information button a, .foodList .foodItem .information .button a {
+    color: #fff;
+}
+
+
+
+.foodItem img {
+    height: 270px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.foodItem .information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    place-items: center;
+}
+
+#menu li.active {
+    font-weight: 700;
+    color: white;
+}
+
+
+.line {
+    background:none;
+    height: 0.5px;
+    margin-top: 100px;
+
+}
+
+.success {
+    background-color: #d0e4d1;
+    color: #4CAF50;
+    position: absolute;
+    z-index: 999999;
+    top: 200px;
+    padding: 30px;
+    left: 450px;
+    border-radius: 10px;
+}
+
+.delete {
+    background-color: #eca9a9;
+    color: #D32F2F;
+}
+
+
+.ordering {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.ordering input[type=number] {
+    text-align: center;
+    /* background-color: #4CAF50; */
+    border: none;
+    padding: 10px;
+    font-size: 19px;
+    width: 60px;
+    border: 0.5px solid var(--header-color);
+    border-radius: 10px;
+}

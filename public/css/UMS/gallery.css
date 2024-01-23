@@ -1,0 +1,42 @@
+.hero {
+    /* background-color: aquamarine; */
+    margin-top: 200px;
+}
+
+
+
+.gallery {
+    background-color: var(--bg-color);
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.gallery a {
+    width: 300px;
+    height: 250px;
+    /* margin: 20px; */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 3px 5px #8d8d8dce;
+    
+}
+
+
+.gallery a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in;
+}
+
+.gallery a img:hover {
+    transform: scale(1.1);
+}
+
+
+.lg-outer .lg-object {
+    padding-bottom: 40px;
+}

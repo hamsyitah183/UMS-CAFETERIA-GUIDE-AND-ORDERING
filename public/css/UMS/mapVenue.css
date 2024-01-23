@@ -1,0 +1,194 @@
+.hero {
+    /* background-color: aquamarine; */
+    margin-top: 130px;
+    height: 530px;
+    width: 100%;
+    position: relative;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(1px);
+}
+
+.hero .hero_word {
+    position: absolute;
+    top: 90px;
+    background-color: rgba(255, 255, 255, 0.799);
+    padding: 10px;
+    left: 30px;
+    border-radius: 7px;
+    width: fit-content;
+}
+
+/* main */
+.main {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+.main .left {
+    margin-left: 20px;
+    /* background-color: aquamarine; */
+    height: 500px;
+    overflow-y: scroll;
+    width: 400px;
+}
+
+.main .left::-webkit-scrollbar
+{
+    width: .6rem;
+    border-radius: 20px;
+    /* background-color: #fce8e4; */
+}
+  
+
+.main .left::-webkit-scrollbar-thumb:hover
+{
+    background-color: var(--header-color);
+}
+
+.main .left .place {
+    margin-top: 10px;
+}
+.main .left .title {
+    font-weight: 500;
+    font-size: 19px;
+    
+    width: 250px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.1s ease-in;
+    background-color: var(--header-color);
+    color: white;
+    cursor: pointer;
+}
+
+
+.main .left .list {
+    width: 250px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.main .left .list li {
+    padding: 10px 10px;
+    margin: 3px 0;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    /* margin-left: 30px; */
+    /* background-color: antiquewhite; */
+}
+
+.main .left .list li:hover {
+    color: var(--title-color);
+    font-weight: 600;
+    
+}
+
+
+.main .left .cafeteria_list, .kiosk_list, .vendor_list {
+    display: none;
+}
+
+.main .left .cafeteria_list.show, .kiosk_list.show, .vendor_list.show {
+    display: block;
+}
+
+.main .left .cafeteria.focus {
+    background-color: #D1E8E4;
+    color: var(--text-color);
+}
+
+.main .left .cafeteria_list {
+    border: 2px solid #D1E8E4;
+}
+
+.main .left .kiosk.focus {
+    background-color: #EAE7C6;
+    color: var(--text-color);
+}
+
+.main .left .kiosk_list {
+    border: 2px solid #EAE7C6;
+}
+
+.main .left .vendor.focus {
+    background-color: #BCCC9A;
+    color: var(--text-color);
+}
+
+.main .left .vendor_list {
+    border: 2px solid #BCCC9A;
+}
+
+/* middle */
+.middle {
+    /* background-color: #BCCC9A; */
+    /* width: 500px; */
+}
+#map {
+    height: 500px;
+    position: relative;
+    width: 820px;
+    z-index: 1;
+}
+
+.leaflet-popup-content {
+    position: relative;
+    /* margin-top: -10px; */
+}
+
+
+.popup{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    left: -110px;
+}
+
+.profile{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+
+
+.place {
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+
+/* cafe */
+.cafe-tool {
+    background-color: #BCCC9A !important;
+    font-size: 14px;
+    position: absolute;
+    top: -20px;
+    left: 1px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.leaflet-popup-content-wrapper .cafe-pop {
+    background-color: #BCCC9A !important;
+    width: 100%;
+}
+
+h2.head a{
+    color:var(--text-color);
+    width: fit-content;
+    margin: 0 auto;
+}

@@ -1,0 +1,161 @@
+:root {
+
+    /* color */
+
+    --bg-color: #D1E8E4; /* Light peach background */
+    --bg-color-light: #EAE7C6; /* Slightly lighter background for elements */
+
+    /* Text Colors */
+    --title-color: #333333; /* Dark text color for titles and headings */
+    --text-color: #666666; /* Medium text color for regular content */
+    --text-color-light: #C37B89; /* Light text color for secondary or less important content */
+
+    /* Body and Container Colors */
+    --body-color: #FFFFFF; /* White background for the main content area */
+    --container-color: #BCCC9A;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --font-logo :  'LindysDiner', sans-serif;
+    --font-heading   :'nevis', sans-serif;
+    --font-paragraph : 'Lato', sans-serif;
+
+    --biggest-font-size: 96px;
+    --h1-font-size: 72px;
+    --h2-font-size: 48px;
+    --h3-font-size: 30px;
+    --normal-font-size: 20px;
+    --small-font-size: 16px;
+    /* --smaller-font-size: .75rem; */
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+
+.hero {
+    padding: 40px;
+    padding-bottom: 60px;
+    background-color: var(--bg-color-light);
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.hero__container {
+    
+    margin-top: 100px;
+    text-align: center;
+}
+
+.hero__container h3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* menu */
+/* .list__food {
+    display: flex;
+} */
+.category {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.category h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+
+.list__food {
+    /* background-color: #EAE7C6; */
+    padding: 20px;
+    padding-bottom: 90px;
+    padding-top: 70px;
+    width: 100%;
+    
+}
+
+.foods {
+    width: 150px;
+    /* background-color: #BCCC9A; */
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 7px 12px 0px rgba(189,178,189,0.64);
+    -moz-box-shadow: 0px 7px 12px 0px rgba(189,178,189,0.64);
+    box-shadow: 0px 7px 12px 0px rgba(189,178,189,0.64);
+    /* background-color: #666666; */    
+}
+
+.foods:hover {
+    border: 1px solid var(--header-color);
+    box-shadow: none;
+    transform: translateY(-30px);
+    cursor: pointer;
+}
+
+
+
+.foods .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.foods .detail p {
+    text-align: center;
+    font-size: 16px;
+}
+
+.foods .detail h3 {
+    color: var(--header-color);
+    font-size: 30px;
+}
+
+.foods h2 {
+    text-align: center;
+    color: var(--title-color);
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.list__food .foods img {
+    height: 250px;
+    width: 260px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic 
+.swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic 
+.swiper-pagination-bullet
+{
+    background-color: var(--header-color);
+    height: 18px;
+    width: 18px;
+}
+
+
+.line {
+    background-color: var(--header-color);
+    margin-top: 10px;
+}
+
+
+  
+  
+

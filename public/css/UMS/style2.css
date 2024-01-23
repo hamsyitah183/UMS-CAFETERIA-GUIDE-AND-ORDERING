@@ -1,0 +1,220 @@
+@import url('https://fonts.cdnfonts.com/css/nevis');
+@import url('https://fonts.cdnfonts.com/css/lato');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+:root {
+    /* #FF6347 */
+    --header-color : #FF6347;
+    --bg-color: #D1E8E4; /* Light peach background */
+    --bg-color-light: #EAE7C6; /* Slightly lighter background for elements */
+
+    /* Text Colors */
+    --title-color: #333333; /* Dark text color for titles and headings */
+    --text-color: #666666; /* Medium text color for regular content */
+    --text-color-light: #C37B89; /* Light text color for secondary or less important content */
+
+    /* Body and Container Colors */
+    --body-color: #FFFFFF; /* White background for the main content area */
+    --container-color: #BCCC9A;
+
+    --font-heading   :'nevis', sans-serif;
+    --font-paragraph : 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-paragraph);
+}
+
+table {
+    border: none;
+    background-color: #333333;
+}
+
+.btn {
+    border:none;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.container {
+    width: 1104px;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+    margin-top: 40px;
+    gap: 50px;
+    justify-content: top;
+}
+
+.container .left{
+    
+    width: 400px;
+    height: 450px;
+    display: flex;
+    
+    /* gap: 20px; */
+}
+
+.container .right {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 90px;
+}
+
+.container .right .line{
+    width: 100%;
+}
+
+
+
+.container .right input[type = text],
+.container .right input[type = email],
+.container .right input[type = password]
+
+{
+   border: none;
+   padding: 15px;
+   border-radius: 30px;
+   border: 1px solid var(--text-color);
+   color: var(--text-color);
+   font-family: 'Rubik', sans-serif;
+   font-size: 18px;
+}
+
+.container .right input[type = text],
+.container .right input[type = email],
+.container .right input[type = password]
+{
+    width: 100%;
+}
+
+.container .right input[type = text]:focus,
+.container .right input[type = email]:focus,
+.container .right input[type = password]:focus
+{
+    border:none;
+    /* border: 3px solid var(--header-color); */
+    color: black;
+    
+}
+
+.container .right .text__box h1{
+    font-family: 'Rubik', sans-serif;
+    /* font-family: var(--font-paragraph); */
+    font-weight: 800;
+    font-size: 46px;
+    color: var(--text-color);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .right .btn {
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.container .right input[type = text]::placeholder,
+.container .right input[type = email]::placeholder,
+.container .right input[type = password]::placeholder {
+    font-weight: 400;
+    color: var(--text-color);
+    
+}
+
+.form .btn {
+    padding: 20px;
+    color: var(--body-color);
+    background-color: var(--header-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form .btn a {
+    color: var(--body-color);
+}
+
+p .small-word {
+    font-family: 'Rubik', sans-serif;
+    color: var(--text-color);
+}
+
+.small-word .red {
+    color: var(--header-color);
+}
+
+
+.successAlert {
+    background-color: #BCCC9A;
+    color: #2E8540;
+    border: 1px solid #2E8540;
+    margin-bottom: 30px;
+    font-size: 20px;
+    width: fit-content;
+    padding: 5px 15px;
+    padding-bottom: 14px;
+    border-radius: 20px;
+    /* margin-bottom: ; */
+}
+
+.successAlert .icon {
+    font-size: 20px;
+}
+
+.icon .bi-x-lg {
+    font-size: 16px;
+    font-weight: 800;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.successAlert.hide {
+    animation: hide_div 0.3s ease forwards;
+    /* opacity: 0; */
+}
+
+@keyframes hide_div {
+    0% {
+        opacity: 100%;
+    }
+
+    10% {
+        opacity: 80%;
+    }
+
+    40% {
+        opacity: 50%;
+    }
+
+    80% {
+        opacity: 20%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+

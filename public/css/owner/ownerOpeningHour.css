@@ -1,0 +1,67 @@
+.tops {
+    background-color: var(--box1-color);
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100px;
+    text-align: center;
+    display:flex;
+    place-content: center;
+    flex-direction: column;
+    place-items: center;
+    border-radius: 10px;
+    
+}
+
+.tops p {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+.mids {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* background-color: aqua; */
+    
+    margin-top: 50px;
+
+}
+
+.mids .item {
+    background-color: var(--box2-color);
+    width: 50%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 20px;
+    position:relative;
+}
+
+.mids .item .edit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+}
+
+.mids .item .edit a {
+    color: var(--text-color);
+}
+
+.item .day {
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.item .hour {
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+
+.item .hour .open, .item .hour .close {
+    font-weight: 600;
+}
+
+

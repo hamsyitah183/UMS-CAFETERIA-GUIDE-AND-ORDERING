@@ -1,0 +1,148 @@
+:root {
+
+    /* color */
+
+    --bg-color: #D1E8E4; /* Light peach background */
+    --bg-color-light: #EAE7C6; /* Slightly lighter background for elements */
+
+    /* Text Colors */
+    --title-color: #333333; /* Dark text color for titles and headings */
+    --text-color: #666666; /* Medium text color for regular content */
+    --text-color-light: #C37B89; /* Light text color for secondary or less important content */
+
+    /* Body and Container Colors */
+    --body-color: #FFFFFF; /* White background for the main content area */
+    --container-color: #BCCC9A;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --font-logo :  'LindysDiner', sans-serif;
+    --font-heading   :'nevis', sans-serif;
+    --font-paragraph : 'Lato', sans-serif;
+
+    --biggest-font-size: 96px;
+    --h1-font-size: 72px;
+    --h2-font-size: 48px;
+    --h3-font-size: 30px;
+    --normal-font-size: 20px;
+    --small-font-size: 16px;
+    /* --smaller-font-size: .75rem; */
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+
+.hero__container {
+    margin-top: 230px;
+    text-align: center;
+}
+
+.hero__container .big__title .highlight {
+    font-size: var(--biggest-font-size);
+}
+
+/* dining option */
+/* dining option */
+.dining__option {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 60px;
+}
+
+
+.dining {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.dining__option h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.dinings {
+  
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  /* border-radius: 50%; */
+  overflow: hidden;
+}
+
+.dinings img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(60%);
+}
+
+.dinings img:hover {
+  border: 2px solid var(--bg-color-light);
+  filter: grayscale(0%);
+  
+
+}
+
+.dinings:hover img {
+    scale: 102%;
+}
+
+.dinings p {
+  position: relative;
+  top: -130px;
+  color: var(--body-color);
+  font-weight: var(--font-semi-bold);
+}
+
+/* top places */
+.top_places {
+    background-color: var(--bg-color);
+}
+
+.top_places .topPlaces__container{
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+
+.topPlaces__container .topPlaces__title h3 {
+    margin-bottom: 20px;
+}
+
+.topPlaces__title h2 {
+    margin-bottom: 30px;
+}
+
+.topPlaces__place {
+    display: flex;
+    gap: 20px;
+}
+
+.topPlaces__place .places {
+    width: 250px;
+    height: 350px;
+}
+
+.places:nth-child(even) {
+    margin-top: 100px;
+}
+
+.topPlaces__place img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.top_places p {
+    text-align: center;
+    font-weight: var(--font-semi-bold);
+}

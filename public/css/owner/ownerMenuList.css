@@ -1,0 +1,167 @@
+.dash-content .announcement {
+    width: 100%;
+}
+
+nav ~ .dashboard {
+    background-color: #faf5f5;
+}
+.flex {
+    display: flex;
+
+}
+.line {
+    background-color: rgb(183, 182, 182);
+    height: 1px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.dash-content .add {
+    /* background-color: aliceblue; */
+    display: flex;
+    width: 95%;
+    place-content: end;
+}
+
+.dash-content .see .btn{
+    width: 150px;
+    margin-top: 10px;
+}
+
+.dash-content .add .btn, .dash-content .btn{
+    width: 10%;
+    border-radius: 10px;
+    
+}
+
+.dash-content .add .btn a, .dash-content .btn a, .btn {
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.contents {
+    display: flex;
+    gap: 30px;
+}
+
+.contents .left {
+    width: 70%;
+}
+
+.content {
+    margin-bottom: 10px;
+}
+
+.content .announcementList table tbody img {
+    width: 100px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+form {
+    margin-top: 30px;
+    
+    /* width: 80%; */
+}
+
+.food .content {
+    background-color: #fff;
+    
+    /* width: 70%; */
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.food  h1 {
+    color: var(--primary-color);
+    margin-left: 10px;
+    padding: 20px;
+}
+
+
+
+.food input[type="text"], .food input[type="file"], .food select{
+    border: none;
+    padding:7px;
+    width: 90%;
+    border-radius: 10px;
+    border: 0.5px solid var(--black-light-color);
+    padding-left: 10px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.food select {
+    width: 60%;
+    font-weight: 600;
+    background-color: #faf5f5;
+    cursor: pointer;
+}
+
+.food input[type="text"]::placeholder{
+    padding-left: 20px;
+}
+
+.food textarea {
+    border: none;
+    border: 0.5px solid var(--black-light-color);
+    width: 80%;
+    border-radius: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.food textarea::placeholder {
+    padding: 10px;
+   
+
+}
+
+
+
+
+.input {
+    flex-direction: column;
+    gap: 10px;
+}
+.food .fourth {
+    position: sticky;
+    top: 100px;
+}
+
+.food .fourth .published {
+    font-weight: 600;
+    padding: 20px;
+}
+
+.food .fourth .published .date {
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.fourth .button {
+    display: flex;
+    place-content: end;
+    margin-right: 10px;
+    
+}
+.fourth .btn {
+    color: #fff;
+    font-weight: 500;
+    width: 80px;
+    cursor: pointer;
+    
+}
+
+ul li.view button,
+ul li.edit button,
+ul li.delete button
+{
+    width: 100px !important;
+    height: 50px;
+    border-radius: 10px;
+}

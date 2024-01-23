@@ -1,0 +1,47 @@
+ul li.view button,
+ul li.edit button,
+ul li.delete button
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+.newAnnouncement {
+    padding-bottom: 20px;
+}
+
+.newAnnouncement .submit{
+    /* background-color: #4CAF50; */
+    display: block;
+    /* position: absolute; */
+    top: 600px;
+    left: 400px;
+    
+}
+
+.newAnnouncement .submit button {
+    color: var(--panel-color);
+    font-weight: 400;
+
+}
+
+.newAnnouncement select {
+    border: none;
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.newAnnouncement .ownerList.submit{
+    /* background-color: #4CAF50; */
+    display: block;
+    /* position: absolute; */
+    top: 750px;
+    left: 400px;
+    
+}

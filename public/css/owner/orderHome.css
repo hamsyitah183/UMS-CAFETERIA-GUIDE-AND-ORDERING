@@ -1,0 +1,257 @@
+.middle {
+    display: flex;
+    gap: 30px;
+}
+
+.orderPending {
+    /* background-color: aqua; */
+    width: 50%;
+    padding: 10px 15px;
+    background-color: var(--box1-color);
+    border-radius: 10px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.orderPending > p {
+    color: var(--primary-color);
+
+}
+
+.orderPendingTable {
+    /* background-color: antiquewhite; */
+    padding: 10px;
+}
+
+.orderPendingTable .item {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    place-items: center;
+    border: 1px solid #b4b3b3;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.orderPendingTable .item .date {
+    /* width: calc(100% - 100px); */
+    /* background-color: aqua; */
+    padding: 5px;
+    color: var(--text-color);
+    /* font-size: 15px; */
+}
+
+.orderPendingTable .item .orderId {
+    font-size: 15px;
+    padding: 5px;
+    width: 100%;
+    
+}
+
+.orderPendingTable .item .activity {
+    display: flex;
+    gap: 10px;
+    /* background-color: aqua; */
+    font-size: 28px;
+}
+
+.orderPendingTable .item .activity input[type='radio'] 
+{
+    display: none;
+}
+
+.accept.view{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+}
+.accept.view a {
+    color: var(--primary-color);
+
+}
+
+.processOrder {
+    background-color: var(--box2-color);
+    width: 40%;
+}
+
+.processOrder  .date {
+    width: 200px;
+}
+.processOrder .orderId {
+    width: 300px;
+}
+
+
+.cancelOrder {
+    width: 90%;
+    margin: 30px 0;
+    background-color: var(--box3-color);
+}
+
+.cancelOrder .date {
+    width: 80%;
+}
+
+.cancelOrder .orderId{
+    width: 100%;
+}
+
+.cancelOrder .view {
+    font-size: 15px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.cancelOrder .view a {
+    color: white;
+    margin-left: 5px;
+}
+
+.orderPending.cancel {
+    background-color: #f4dbd8;
+}
+
+
+
+/* popup */
+
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999999;
+    display: none;
+    /* display: block; */
+    transition: all 100ms ease-in-out;
+
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(0) ;
+    /* transform: translate(-50%, -45%) scale(1); */
+    background: #fff;
+    width: 750px;
+    height: 520px;
+    z-index: 999999;
+    /* text-align: center; */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: all 100ms ease-in-out;
+    /* overflow-y: scroll; */
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+.popup .header {
+    /* background-color: aliceblue; */
+    padding: 10px 5px;
+    position: sticky !important;
+    top: 0;
+    box-shadow: none;
+    
+    /* border-bottom:1px solid rgba(134, 134, 134, 0.493) ; */
+}
+
+.popup .information {
+    /* background-color: aliceblue; */
+    height: 400px !important;
+    overflow-y: scroll;
+    padding-bottom: 20px;
+    background-color: #f7f2f1;
+    padding: 20px;
+    position: relative;
+
+}
+
+
+
+
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+.popup .button {
+    /* background-color: #f97963; */
+    width: fit-content;
+    border: none;
+    margin: 0 auto;
+
+}
+
+
+.popup .content .btn a{
+   
+    color: #fff;
+}
+
+.popup .content .btn {
+    /* border-top: 1px solid black; */
+    margin-top: 10px;
+
+}
+
+.popup .content .btn:hover a {
+   
+    color: var(--primary-color);
+}
+
+
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 100ms ease-in-out;
+    transform: translate(-50%, -45%) scale(1);
+
+}
+
+.popup .information .item .img {
+    width: 100px;
+    height: 100px;
+}
+
+.popup .information .item .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup .information .item .info .quantity{
+    color: var(--primary-color);
+}
+
+.popup .information .item .info .note {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 5px;
+}

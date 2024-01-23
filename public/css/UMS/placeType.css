@@ -1,0 +1,135 @@
+:root {
+
+    /* color */
+
+    --bg-color: #D1E8E4; /* Light peach background */
+    --bg-color-light: #EAE7C6; /* Slightly lighter background for elements */
+
+    /* Text Colors */
+    --title-color: #333333; /* Dark text color for titles and headings */
+    --text-color: #666666; /* Medium text color for regular content */
+    --text-color-light: #C37B89; /* Light text color for secondary or less important content */
+
+    /* Body and Container Colors */
+    --body-color: #FFFFFF; /* White background for the main content area */
+    --container-color: #BCCC9A;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --font-logo :  'LindysDiner', sans-serif;
+    --font-heading   :'nevis', sans-serif;
+    --font-paragraph : 'Lato', sans-serif;
+
+    --biggest-font-size: 96px;
+    --h1-font-size: 72px;
+    --h2-font-size: 48px;
+    --h3-font-size: 30px;
+    --normal-font-size: 20px;
+    --small-font-size: 16px;
+    /* --smaller-font-size: .75rem; */
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+
+/* hero */
+.dining__hero {
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+.dining__hero img{
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+    object-position: center;
+    filter: invert(0.4);
+    
+    position: absolute;
+}
+
+.dining__container {
+    text-align: center;
+    position:relative;
+    top: 90px;
+}
+
+.dining__container h3 {
+    color: var(--container-color);
+}
+
+/* list place */
+.list__place {
+    margin-top: 200px;
+}
+
+.list__place .container .places:first-child {
+    /* background-color: #666666; */
+    padding-top: 100px;
+}
+
+.places{
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    margin-bottom: 80px;
+}
+
+.places .place__img img {
+    height: 375px;
+    width: 445px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.place__detail a {
+    color: var(--title-color);
+}
+
+.place__detail h3{
+    margin-bottom: 30px;
+}
+
+.place__detail p {
+    font-size: 17px;
+    /* width: 400px; */
+    text-align:center;
+}
+
+.place__detail p::after {
+    content: " ";
+    display: block;
+    background-color: #333333;
+    width: 100%;
+    height: 1px;
+    margin-top: 40px;
+}
+
+.place__detail .details {
+    margin-top: 30px;
+}
+
+.details h4 {
+    margin-top: 5px;
+}
+
+.place__button {
+    margin-top: 40px;
+    
+}
+
+.place__button .secondary {
+    color: var(--header-color);
+}
+
+.place__button .secondary:hover {
+    background-color: var(--header-color);
+    color: var(--body-color);
+}

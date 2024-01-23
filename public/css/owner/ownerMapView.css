@@ -1,0 +1,68 @@
+#map {
+    height: 500px;
+    position: relative;
+    width: 520px;
+    z-index: 1;
+}
+
+.mapContent {
+    display: flex;
+    gap: 40px;
+}
+
+.mapContent .right, .mapContent form {
+    display: flex;
+    flex-direction: column  ;
+    gap: 40px;
+    width: 35%;
+}
+
+.mapContent form {
+    width: 100%;
+}
+.mapContent .right label {
+    font-size: 23px;
+    font-weight: 600;
+ 
+    color: var(--text-color);
+}
+
+.mapContent input[type='text'] {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    border: 0.5px solid var(--primary-color);
+    font-weight: 500;
+    width: 100%;
+}
+
+.activity {
+    margin-top: 30px;
+    display: flex;
+    place-content: end;
+    margin-bottom: 90px;
+}
+
+.activity ul{
+    display: flex;
+    gap: 40px;
+}
+
+
+.btn {
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    /* display: flex; */
+}
+
+.mapCoord.end {
+    display: flex;
+    place-content: end;
+}
+
+.head {
+    color: var(--black-light-color);
+    margin-bottom: 40px;
+}

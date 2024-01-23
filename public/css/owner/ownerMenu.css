@@ -1,0 +1,53 @@
+
+
+.overview .date {
+    /* background-color: aquamarine; */
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'nevis', sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.nav-links li.active .menu-list a::before {
+    content: "" !important;
+    position: absolute;
+    left: -7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background:none;
+}
+
+.nav-links li.active .menu-list a i {
+    color: #fff;
+}
+
+
+.nav-links li.active .menu-list a.active i,
+.nav-links li.active .menu-list a:hover,
+.nav-links li.active .menu-list a:hover i
+{
+    /* background-color: blue; */
+    color: var(--primary-color);
+}
+
+
+.boxes .box .number {
+    font-size: 22px;
+}
+
+.boxes .box {
+    cursor: pointer;
+    transition: color 0.5s ease;
+    -webkit-box-shadow: 1px 1px 8px -1px rgba(189,189,189,1);
+    -moz-box-shadow: 1px 1px 8px -1px rgba(189,189,189,1);
+    box-shadow: 1px 1px 8px -1px rgba(189,189,189,1);
+}
+
+.boxes .box:hover {
+    background-color: var(--panel-color);
+    border: 0.5px solid var(--primary-color);
+    /* color: var(--primary-color); */
+}
+

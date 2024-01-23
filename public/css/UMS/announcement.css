@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+
+    /* color */
+    --header-color : #FF6347;
+
+    --bg-color: #D1E8E4; /* Light peach background */
+    --bg-color-light: #EAE7C6; /* Slightly lighter background for elements */
+
+    /* Text Colors */
+    --title-color: #333333; /* Dark text color for titles and headings */
+    --text-color: #666666; /* Medium text color for regular content */
+    --text-color-light: #C37B89; /* Light text color for secondary or less important content */
+
+    /* Body and Container Colors */
+    --body-color: #FFFFFF; /* White background for the main content area */
+    --container-color: #BCCC9A;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --font-logo :  'LindysDiner', sans-serif;
+    --font-heading   :'nevis', sans-serif;
+    --font-paragraph : 'Lato', sans-serif;
+    --font-extra: 'Rubik', sans-serif;
+
+    --biggest-font-size: 96px;
+    --h1-font-size: 72px;
+    --h2-font-size: 48px;
+    --h3-font-size: 30px;
+    --normal-font-size: 20px;
+    --small-font-size: 16px;
+    /* --smaller-font-size: .75rem; */
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+
+
+
+.hero {
+    margin-top: 100px;
+    background-color: var(--bg-color-light);
+}
+
+.hero__container {
+    padding-top: 150px;
+    display: flex;
+    gap: 50px;
+    padding-bottom: 30px;
+}
+
+.hero__caption {
+    width: 551px;
+}
+
+.hero__caption h2 {
+    justify-content: center;
+}
+
+.hero__caption p {
+    margin-top: 30px;
+}
+
+.hero__image img{
+    height: 418px;
+    width: 451px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
+/* announcement */
+
+.announcement {
+    padding-top: 30px;
+}
+
+.announcements{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+    margin-top: 80px;
+}
+
+.announcement__container .announcement__image {
+    width: 470px;
+    height: 270px;
+}
+
+.announcement__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.announcement__dates {
+    margin-top: 50px;
+}
+.announcement__dates h2 {
+    font-size: 60px;
+}
+
+
+.announcement__dates .month::after {
+    content: " ";
+    background-color: var(--text-color);
+    width: 100%;
+    height: 1px;
+    display: block;
+}
+
+.announcement__dates .dates {
+    text-align: center;
+}
+
+.announcement__caption h3 {
+    font-size: 25px;
+    /* background-color: pink; */
+    color: var(--title-color);
+    width: 450px;
+    height: 70px;
+    overflow: hidden;
+    
+}
+
+.announcement__caption .place {
+    /* background-color: #BCCC9A; */
+    width: 450px;
+    padding-bottom: 20px;
+}
+
+
+

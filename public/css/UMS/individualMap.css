@@ -1,0 +1,15 @@
+body {
+    padding-bottom: 50px;
+}
+.hero.container {
+    margin-top: 260px;
+}
+
+#map {
+    height: 500px;
+
+}
+
+.leaflet-bottom.leaflet-right {
+    display: none;
+}

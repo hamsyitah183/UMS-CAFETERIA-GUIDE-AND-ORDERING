@@ -1,0 +1,123 @@
+.dash-content .topContent {
+    margin-top: 30px;
+}
+
+.topContent .icon .back{
+    background-color: var(--primary-color);
+    width: 150px;
+    display: inline-flex;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.topContent .icon .back:hover {
+    background-color: var(--panel-color);
+    border: 1px solid var(--primary-color);
+}
+
+.topContent .icon .back:hover i, 
+.topContent .icon .back:hover .word
+{
+    color: var(--primary-color);
+}
+
+.back i, .back .word {
+    color: var(--panel-color);
+    font-weight: 600;
+}
+
+
+
+.back .word {
+    margin-left: 10px;
+}
+
+.dash-content {
+    background-color: hsl(17, 100%, 98%);
+    padding: 10px;
+}
+
+.content {
+    
+    /* background-color: #707070; */
+    width: 1000px;
+    margin: 0 auto;
+}
+.content table {
+    /* background-color: #707070; */
+    /* padding: 30px; */
+    /* width: 100%; */
+    border-collapse: collapse;
+    /* border-radius: 20px; */
+    margin-top: 20px;
+
+}
+
+.content table td:first-child {
+    text-align: left;
+}
+
+.content table td:last-child{
+    /* background-color: antiquewhite; */
+    text-align: start;
+    padding-left: 30px;
+}
+
+.content .post .postContent {
+    text-align: center;
+}
+
+.postContent .title {
+    /* background-color: antiquewhite; */
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color);
+}
+.content .post .postContent img{
+    width: 700px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.text__box, .body {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.text__box {
+    font-weight: 100;
+    color: var(--black-light-color);
+    margin-bottom: 40px;
+}
+
+.postContent .body .time h3{
+    font-size: 35px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.postContent .body p {
+    text-align: justify;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.body .buttons .activity{
+    margin-top: 90px;
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+}
+
+
+
+
+

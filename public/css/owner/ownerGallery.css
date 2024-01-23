@@ -1,0 +1,154 @@
+.nav ~ .dashboard {
+    background-color: #f7e1e1;
+}
+
+.add {
+    display: flex;
+    place-content: end;
+
+}
+
+.add .btn {
+    width: fit-content;
+    border-radius: 10px;
+    padding: 0 20px ;
+}
+
+.add .btn a {
+    font-weight: 600;
+    color: white;
+}
+
+.content {
+    margin-top: 50px;
+}
+.galleries{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    border: none;
+    width: 100%;
+    background: none;
+}
+
+.galleries .gallery {
+    padding: 10px;
+    margin: 10px 0;
+    border: 0.5px solid rgba(219, 215, 215, 0.736);;
+}
+
+.galleries .gallery .img {
+    width: calc(100%-300px);
+    height: 280px;
+    margin:  0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+
+.galleries .gallery .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease-in;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.galleries .gallery .img img:hover {
+    transform: scale(120%);
+}
+
+.galleries .gallery .title {
+    
+    /* background-color: aquamarine; */
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+.gallery .activity {
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.5px solid rgb(183, 182, 182);
+    padding: 20px 0;
+    
+}
+
+
+.activity .btn {
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    
+}
+
+.activity .btn a {
+    color: white;
+}
+
+.activity .view{
+    background-color:  #4CAF50;;
+    width: 80px;
+}
+
+.activity .edit {
+    background-color: #2196F3;;
+}
+
+.activity .delete {
+    background-color: #D32F2F;;
+}
+
+.gallerySearch {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.searchs input {
+    height: 33px;
+    border-radius: 20px;
+    border: none;
+    border: 0.5px solid var(--primary-color);
+    width: 300px;
+    padding-left: 20px;
+}
+
+.galleryForm form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.galleryForm input {
+    border: none;
+    border: 0.5px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.galleryForm input[type=text] {
+    width: 70%;
+}
+
+.btn {
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0 10px;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* .activity {
+    display: flex;
+    place-content: end;
+    margin-right: 250px;
+    cursor: pointer;
+} */

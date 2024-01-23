@@ -1,0 +1,144 @@
+.hero {
+    margin-top: 170px;
+    position: relative;
+    /* overflow: hidden; */
+    padding-top: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    filter:blur(1.5px);
+}
+
+.hero .hero__container {
+    position:absolute;
+    top: 60px;
+    left: 350px;
+    width: fit-content;
+    background-color: var(--bg-color-light);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.cart {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.cart .img {
+    width: 600px;
+    height: 400px;
+
+}
+
+.cart .right {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.cart .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart .right .title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+.cart .right input[type='number'] {
+    width: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    border: 0.5px solid var(--header-color);
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+.cart .right .notes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.cart .right .notes .titleNote {
+    font-size: 15px;
+    color: black;
+    
+}
+
+.cart .right {
+    width: 100%;
+}
+
+.cart .right  textarea {
+    width: 100%;
+    border: none;
+    border: 0.5px solid var(--header-color);
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 30px;
+    height: 120px;
+}
+
+.cart .right .btn {
+    margin: 10px 0;
+   
+}
+
+
+.cart .right .btn {
+    margin-left: 420px;
+}
+
+
+.back {
+    margin-top: 50px;
+}
+
+.small {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    background-color: #f2e1dd;
+    width: 500px;
+    padding: 10px;
+    line-height: 20px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.img.payment {
+    height: 400px;
+    width: 400px;
+}
+
+.right #payment_no {
+    /* background-color: aqua; */
+    height: 30px;
+    width: 80%;
+    resize: none;
+    overflow: hidden;
+    font-family: var(--font-01);
+    padding: 5px;
+}
+
+.right.payment form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+

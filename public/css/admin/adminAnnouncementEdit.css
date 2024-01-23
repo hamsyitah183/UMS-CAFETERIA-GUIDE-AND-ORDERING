@@ -1,0 +1,97 @@
+.topContent .icon .back {
+    width: fit-content;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topContent .icon .back i {
+    font-size: 20px;
+}
+
+.content .editForm {
+    /* background-color: antiquewhite; */
+    padding: 20px;
+    margin-top: 10px;
+   
+}
+
+.content .editForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content .editForm form .div label {
+    /* background-color: pink; */
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    font-weight: 700;
+}
+
+.content .editForm form .div input, select
+
+{
+    border: none;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: var(--black-light-color);
+    border: 1px solid var(--primary-color);
+}
+
+.content .editForm form .div textarea {
+    border: none;
+    width: 90%;
+    border-radius: 20px;
+    resize: none;
+    border: 1px solid var(--primary-color);
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 16px;
+    color: var(--black-light-color);
+
+}
+
+.content .editForm form .div:last-child {
+    width: 50%;
+    margin: 0 auto;
+    /* background-color: aquamarine; */
+    text-align: end;
+}
+
+.icon button {
+    width: fit-content;
+    border-radius: 0;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+.icon button a .word {
+    color: var(--panel-color);
+    
+}
+
+/* owner */
+.editForm form {
+    /* background-color: antiquewhite; */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.editForm form input {
+    /* background-color: aquamarine; */
+    width: 900px;
+}
+
+.editForm form .addressLine {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+

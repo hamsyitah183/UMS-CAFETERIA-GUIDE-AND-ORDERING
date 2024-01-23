@@ -1,0 +1,100 @@
+ul.activity {
+    display: flex;
+    gap: 10px;
+    place-content: center;
+}
+
+ul.activity li.view button,
+ul.activity li.delete button
+{
+    /* background-color: antiquewhite; */
+    width: 100px;
+    border-radius: 20px;
+}
+
+.order table tbody {
+    text-align: center;
+
+}
+
+.dash-content .announcement {
+    padding: 10px;
+    width: 100%;
+    background-color: var(--box2-color);
+    border:0.5px solid rgb(183, 182, 182);
+    border-radius: 10px;
+}
+
+
+
+table, .announcement {
+    margin-top: 30px;
+    width: 100%;
+}
+
+table tr td {
+    text-align: center;
+}
+
+tr td:nth-child(3) {
+    padding: 20px;
+}
+
+.notice {
+    padding: 10px;
+}
+
+.add {
+    display: flex;
+    place-content: end;
+    margin-right: 50px;
+}
+
+.add .btn {
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0 10px;
+    
+}
+
+.add .btn a {
+    color: white;
+    font-weight: 500;
+}
+
+.payment .box1 {
+    border: 1px solid var(--primary-color);
+    width: 80%;
+    padding: 20px;
+    margin: 20px 0;
+    transition: all 0.1s ease-in;
+    border-radius: 10px;
+}
+
+.payment .box1:hover {
+    background-color:  #ff6347ab;
+    color: white;
+}
+
+.payment .from {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.payment .label {
+    font-weight: 500;
+}
+
+.payment a {
+    color: var(--text-color);
+}
+
+.payment .box1:hover a, .payment .body {
+    color: white;
+}
+
+
+.payment .body {
+    margin: 10px 0;
+    color: var(--text-color);
+}

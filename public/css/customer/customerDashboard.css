@@ -1,0 +1,279 @@
+
+
+.content1 {
+    display: grid;
+    grid-template-columns: 70% 20%;
+    gap: 20px;
+}
+
+.news {
+    /* width: 750px; */
+    position: relative;
+}
+
+.news .img {
+    width: 100%;
+    height: 300px;
+}
+
+.news .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: contrast(15%);
+  
+}
+
+.news .word {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+.news .word .newsTitle {
+    /* background-color: white; */
+    /* width: 300px; */
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+   
+    text-wrap: wrap;
+    border-radius: 10px;
+}
+
+.news .word .highlight {
+    color: #f94120;
+    font-size: 33px;
+    font-weight: 600;
+}
+
+.news .word h1 {
+    font-size: 40px;
+}
+
+.news .word .btn, .btn {
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.news .word .btn a, .btn a {
+    color: white;
+}
+
+.news .newsHeadline {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.orderCart {
+    border: 0.5px solid rgb(183, 182, 182);
+
+    width: 300px;
+    padding: 10px;
+    height: 450px;
+    position: sticky;
+    top: 80px;
+}
+
+.orderCart .activity {
+    border: 0.5px solid rgb(183, 182, 182);
+    padding: 10px;
+    width: 300px;
+    margin-left: -11px;
+    border-top: none;
+}
+
+.orderCart .cartContent {
+    height:320px;
+    overflow-y: scroll;
+}
+
+.orderCart .cartContent .item .img {
+    width: 80px;
+    height: 80px;
+
+}
+
+.orderCart .cartContent .item .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.orderCart .cartContent .item {
+    display: flex;
+    gap: 20px;
+    margin: 5% 0;
+}
+
+.orderCart .cartContent .right{
+    display: flex;
+    gap: 40px;
+    display: flex;
+    place-items: center;
+    /* position: sticky; */
+    /* top: 60px; */
+}
+
+.orderCart .cartContent .left {
+  
+    width: 80px;
+}
+
+
+.orderCart .cartContent .right button {
+    background-color: #D32F2F;
+    
+}
+
+.orderCart .cartContent .right .foodName {
+    font-size: 16px;
+}
+
+.orderCart .cartContent .right .quantity{
+    color: var(--primary-color);
+}
+
+.orderCart .btn {
+    display: flex;
+    
+}
+
+.content2 {
+    margin-top: 50px;
+}
+.content2 .places {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+}
+
+.content2 .place {
+    width: calc(100% - 50px);
+    border: 0.5px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    /* margin: 30px; */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.content2 .place .img {
+    width: 150px;
+    height: 150px;
+}
+
+.content2 .place .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.content2 .place .placeName {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.place .placeName .name {
+    font-weight: 500;
+}
+
+.content3 {
+    margin-top: 90px;
+    border: 0.5px solid rgb(183, 182, 182);
+    padding: 30px;
+}
+
+.content3 .orderContainer .orders {
+    display: flex;
+    flex-direction: column;
+}
+
+.content3 .orderContainer .orders .item {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    margin: 10px 0;
+    /* background-color: antiquewhite; */
+    padding: 20px 10px;
+}
+
+.content3 .orderContainer .orders .item .orderName {
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.content3 .orderContainer .orders .item .date {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.content3 .orderContainer .orders .item .totalPrice {
+ 
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.content3 .orderContainer .orders .item .location {
+    color: var(--primary-color);
+}
+
+.content3 .orderContainer .orders .item .status {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content3 .orderContainer .orders .item .status {
+   
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.content3 .orderContainer .orders .item .status.pending {
+    color: #f94120;
+    background-color: #f5e4e1;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    margin: 10px 0;
+}
+
+.buttonFilter {
+    /* background-color: #D32F2F; */
+    padding: 10px;
+  
+}
+
+.buttonFilter .filterLabel {
+    font-weight: 500;
+    text-align: center;
+}
+
+.buttonFilter input, .buttonFilter select {
+    border: none;
+    border: 0.5px solid var(--primary-color);
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.buttons .btn {
+    margin-top: 25px;
+    color: white;
+}
+
+

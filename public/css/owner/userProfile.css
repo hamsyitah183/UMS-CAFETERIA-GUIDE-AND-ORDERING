@@ -1,0 +1,112 @@
+
+
+.dash-content {
+    margin-top: 50px;
+}
+
+.profileBox1 {
+    display: flex;
+    gap: 30px;
+    place-items: center;
+    position: relative;
+}
+
+.profileBox1 .left .img {
+    width: 100px;
+    height: 100px;
+    
+}
+
+.profileBox1 a i{
+    color: var(--primary-color);
+    font-size: 18px;
+    position: absolute;
+    top: 30px;
+    left: 220px;
+}
+
+.profileBox1 .left .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profileBox1 .right .name{
+    /* color: var(--text-color); */
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+
+.profileBox1 .right .role {
+    color: var(--text-color);
+}
+
+
+.profileBox2 {
+    margin-top: 50px;
+}
+
+.profileBox2 .details {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    /* place-items: center; */
+}
+
+.profileBox2 .details .icon {
+    background-color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* text-align: center; */
+    display: flex;
+    place-content: center;
+    justify-content: center;
+    place-items: center;
+    color: white;
+}
+
+.profileBox2 .details .icon i {
+    font-size: 20px;
+}
+
+
+.profileBox2 .details .info {
+    display: flex;
+    place-content: center;
+    justify-content: center;
+    place-items: center;
+    color: var(--text-color);
+}
+
+.profileBox2 .details .places{
+    display: flex;
+    flex-direction: column;
+    
+    place-items: start;
+    gap: 5px;
+}
+
+
+.profileBox3 {
+    margin-top: 50px;
+}
+
+.profileBox3 .perInfo {
+    /* padding: 10px; */
+    margin-top: 20px;
+    margin-left: 10px;
+    border: 0.5px solid #7070705f;
+    border-bottom: none;
+}
+
+
+.profileBox3 .perInfo .row {
+    display: flex;
+    gap: 30px;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 0.5px solid #7070705f;
+}

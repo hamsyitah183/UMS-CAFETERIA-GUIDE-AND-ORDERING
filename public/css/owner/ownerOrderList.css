@@ -1,0 +1,29 @@
+.accept {
+    display: flex;
+    padding: 8px;
+}
+
+.accept.yes {
+    /* background-color: #4CAF50; */
+    color: #4CAF50;
+    border: 1px solid #4CAF50;;
+    border-radius: 50%;
+}
+
+.accept.no {
+    /* background-color: #4CAF50; */
+    color: #D32F2F;
+    border: 1px solid #D32F2F;
+    border-radius: 50%;
+}
+
+.accept input[type='radio'] {
+    display: none;
+}
+
+
+#myForm .button {
+    font-size: 20px;
+    /* background-color: aqua; */
+    /* padding: 5px; */
+}

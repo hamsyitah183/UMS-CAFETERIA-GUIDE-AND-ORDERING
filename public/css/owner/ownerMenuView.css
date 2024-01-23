@@ -1,0 +1,389 @@
+.container {
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.latest__menu .title {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.title .view a{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    font-size: 15px;
+    gap: 10px;
+    color: var(--primary-color);
+}
+
+.title .view i {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0px;
+}
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999999;
+    display: none;
+    /* display: block; */
+    transition: all 100ms ease-in-out;
+
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -40%) scale(0) ; */
+    transform: translate(-50%, -45%) scale(1);
+
+    background: #fff;
+    width: 650px;
+    height: 520px;
+    z-index: 999999;
+    /* text-align: center; */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: all 100ms ease-in-out;
+    /* overflow-y: scroll; */
+    position: relative;
+    
+}
+
+.popup .header {
+    /* background-color: aliceblue; */
+    padding: 10px 5px;
+    position: sticky !important;
+    top: 0;
+    box-shadow: none;
+    
+    border-bottom:1px solid rgba(134, 134, 134, 0.493) ;
+}
+
+.popup .information {
+    /* background-color: aliceblue; */
+    height: 400px !important;
+    overflow-y: scroll;
+    padding-bottom: 20px;
+}
+
+.popup .information .description {
+    font-weight: 200;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: var(--header-color);
+    color: var(--header-color);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.popup .content img {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.popup .content .btn a{
+   
+    color: #fff;
+}
+
+.popup .content .btn {
+    /* border-top: 1px solid black; */
+    margin-top: 10px;
+}
+
+.popup .content .btn:hover a {
+   
+    color: var(--header-color);
+}
+
+.popup .content .button {
+    padding: 1px 0;
+    border-top:1px solid rgba(134, 134, 134, 0.493) ;
+
+}
+
+.popup .content .button .btn {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    width: fit-content;
+    color: #fff;
+    /* font-weight: 500; */
+    padding: 0 20px;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 100ms ease-in-out;
+    transform: translate(-50%, -45%) scale(1);
+
+}
+
+/* list item latest */
+
+.latest__menu .breakfast {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+    width: 90%;
+    overflow-x: scroll;
+    
+}
+.latest__menu .breakfast .list{
+    border: 1px solid var(--text-color);
+    width: 290px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.latest__menu .breakfast .list:hover{
+    border: 1px solid var(--primary-color);
+    
+}
+
+.latest__menu .breakfast .list .item .img {
+    width: 230px;
+    height: 200px;
+    overflow: hidden;
+    /* padding-top: 20px; */
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.latest__menu .breakfast .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
+.latest__menu .breakfast .list .item img:hover {
+    transform: scale(115%);
+    overflow: hidden;
+}
+
+.breakfast .list  h3 {
+    /* background-color: aquamarine; */
+    font-size: 27px;
+}
+
+.breakfast .information .info_1 {
+    /* background-color: aqua; */
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.breakfast .information .info_2 {
+    font-size: 14px;
+    color: var(--black-light-color);
+    margin-top: 10px;
+}
+
+.option .ri-eye-line {
+    text-align: end;
+    /* background-color: black; */
+    position: absolute;
+    right: 10px;
+    top: 220px;
+
+}
+
+.option .ri-eye-line:hover {
+    text-align: end;
+    /* background-color: black; */
+    color: var(--primary-color);
+    animation: moveUpDown 2s linear infinite;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px); /* Adjust the distance of movement as needed */
+    }
+}
+
+/* popular food */
+.populars {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+.populars .popular{
+    /* width: calc(100% - 600px); */
+    height: 130px;
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.populars .popular:hover {
+    border: 1px solid var(--primary-color);
+}
+
+
+
+
+.populars .popular .img {
+    width: 150px;
+    height: 100px;
+}
+
+.populars .popular .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+
+/* review */
+.reviews {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 50%;
+    gap: 10px;
+    padding: 10px;
+    height: 700px;
+    overflow-x: scroll;
+}
+
+.reviews .review {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    border-radius: 30px;
+    width: 90%;
+}
+.reviews .review .img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.reviews .review .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    
+}
+
+.reviews .review .information .details {
+    margin-top: 50px;
+    position: relative;
+
+}
+
+.reviews .review .information .name {
+    text-align: center;
+}
+
+.reviews .review .information .details .foodImg {
+    width: 90%;
+    height: 250px;
+}
+
+.reviews .review .information .details .foodImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.reviews .review .information .details .rating {
+    position: absolute;
+    bottom:     230px;
+    left: 20px;
+    background-color: #ff6347e1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    width: fit-content;
+}
+
+.reviews .review .information .details .rating .number {
+    color: #BCCC9A;
+    font-size: 30px;
+}
+
+.reviews .review .information .details .date {
+    display: inline-flex;
+    gap: 10px;
+    justify-self: end;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 230px;
+}
+
+.reviews .review .information .details .food_name {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.reviews .review .information .details .comment {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    width: 90%;
+    line-height: 2vw;
+    color: #666666;
+}
+
+.reviews .review .information .details .comment i {
+    font-size: 30px;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+
+
+

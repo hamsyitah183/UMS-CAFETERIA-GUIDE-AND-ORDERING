@@ -1,0 +1,201 @@
+nav ~ .dashboard {
+    background-color: #faf5f5;
+}
+
+.flex {
+    display: flex;
+}
+
+.dash-content {
+    margin-left: 40px;
+}
+
+.button.return ul {
+    display: flex;
+    gap: 30px;
+}
+
+
+.button.return ul li button {
+    width: 200px;
+    
+}
+
+.button.return ul li button a {
+    padding: 50px 0;
+}
+
+
+/* content */
+.content {
+    display: flex;
+    margin-top: 50px;
+    gap: 5%;
+}
+
+.content .img {
+    width: calc(100%-600px);
+    height: 450px;
+}
+
+.content .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.content .details .name {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.content .info {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0;
+    color: var(--black-light-color);
+}
+
+.content .info .detail {
+    font-weight: 700;
+    margin-right: 3px;
+    color: var(--text-color);
+}
+
+.title {
+    display: inline-flex;
+    gap: 10px;
+    font-size: 36px;
+}
+
+.title i {
+    background-color: none;
+
+}
+
+.address {
+    width: 300px;
+}
+
+.content {
+    margin-bottom: 10;
+}
+
+.content, .content table {
+    width: 100%;
+}
+
+.info .openingHour{
+    width: 80%;
+    background-color: var(--box1-color);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+
+}
+.btn.edit {
+    width: 70px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+}
+.openingHour .btn.edit {
+    
+    top: 10px;
+    right: 30px;
+}
+
+.btn.edit a {
+    color: white;
+}
+
+.info .openingHour table tr, .info .openingHour td {
+    padding: 20px;
+    width: fit-content;
+    
+}
+
+
+.info .openingHour .bold {
+    font-weight: 800;
+   
+}
+
+.content .infos {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.content .infos .socialMedia {
+    width: 400px;
+    background-color: var(--box2-color);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.socialMedia .media {
+    display: flex;
+    gap: 20px;
+    margin: 15px 0;
+    margin-left: 10px;
+    color: var(--text-color);
+    place-items: center;
+}
+
+.socialMedia .media .accountName {
+    font-weight: 500;
+   
+}
+
+.socialMedia .media i {
+    font-size: 40px;
+}
+
+.socialMedia .media .accountName a{
+    color: var(--text-color);
+}
+
+.socialMedia .btn.edit {
+    top: 20px;
+    right: 30px;
+}
+
+
+.content .infos .payment {
+    padding: 30px;
+    background-color: var(--box3-color);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.payment .method {
+    margin: 30px 0;
+    display: flex;
+    gap: 10px;
+    color: var(--text-color);
+}
+
+.payment .btn.edit {
+    top: 20px;
+    right: 70px;
+}
+
+.payment .method .left i {
+    font-size: 40px;
+}
+
+.payment .method .right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payment .method .right h3 {
+    font-size: 20px;
+    color: var(--black-light-color);
+}
