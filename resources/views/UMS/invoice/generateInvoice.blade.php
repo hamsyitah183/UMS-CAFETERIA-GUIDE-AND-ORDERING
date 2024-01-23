@@ -87,7 +87,7 @@
                     <h2 class="text-start">UMS Cafeteria Guide and Ordering</h2>
                 </th>
                 <th width="50%" colspan="2" class="text-end company-data">
-                    <span>Invoice Id: #6</span> <br>
+                    <span>Invoice Id: #{{ $order->id }}</span> <br>
                     <span>Date: {{ $order->created_at->format('d / m / Y') }}</span> <br>
                     <span>Address: {{ $order->foodOption->addressLine1 }}</span> <br>
                 </th>
