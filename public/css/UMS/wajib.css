@@ -830,3 +830,33 @@ box-shadow: 1px 3px 5px -1px rgba(92,89,92,1);
 .hello.remove, .search.remove {
   display: none;
 }
+
+footer {
+  background-color: var(--bg-color);
+  padding: 50px 0;
+  margin-top: 50px;
+
+}
+
+.footer__container {
+  display: flex;
+  gap: 50px;
+}
+
+.footer__container .logo {
+  font-size: 30px;
+  width: 300px;
+  padding: 10px;
+  font-weight: 500;
+  color: var(--header-color);
+}
+
+.footer__container .content {
+  width: 400px;
+}
+
+.footer__container .content ul li {
+  padding: 10px;
+  font-size: 16px;
+}
+

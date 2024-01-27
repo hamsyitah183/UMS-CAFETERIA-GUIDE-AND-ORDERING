@@ -18,6 +18,6 @@ class ReviewAndRating extends Model
 
     public function foodOption()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(FoodOption::class, 'place_id');
     }
 }

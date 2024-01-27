@@ -29,7 +29,9 @@ class HomepageController extends Controller
                 // 'admin/adminDashboard',
                 // 'homepage'
             ],
-            'announcement' => \App\Models\Announcement::all()
+            'announcement' => \App\Models\Announcement::all(),
+            'gallery' =>  \App\Models\Gallery::take(10)->get(),
+            'feedback' => \App\Models\ReviewAndRating::take(4)->get()
         ]);
     }
 

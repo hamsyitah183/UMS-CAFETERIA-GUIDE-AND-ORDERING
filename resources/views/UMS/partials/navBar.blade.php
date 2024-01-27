@@ -85,7 +85,7 @@
               
               
 
-              <li><a href="#" class="nav__link">About us</a></li>
+              <li><a href="/about" class="nav__link">About us</a></li>
 
               <!-- cart -->
               @if (auth()->check())

@@ -1,4 +1,6 @@
+
 @extends('UMS.layout.main')
+
 
 @section('container')
     <!-- Announcement section -->
@@ -67,30 +69,11 @@
     </section>
 
 
-    <!-- search section -->
-    <section class="search__section" id="search">
-        <div class="search__container container">
-            <h2 class="medium__title">
-                <span class="highlight">Search</span> for food and place!
-            </h2>
-
-            <form action="/search">
-                <div class="search-box">
-                    <input type="text" name="search" id="" placeholder="FKJ or Nasi" class="search__textbox">
-                
-                    <button type="submit">
-                        <div class="search-logo btn">
-                            <i class="ri-search-line"></i>
-                        </div>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
+    
 
     <section class="dining__option" id="dining">
         <div class="dining__container container">
-            <h2 class="big__title"><span class="highlight">Food option</span></h2>
+            <h2 class="big__title"><span class="highlight">Food places</span></h2>
 
             <div class="dining">
                 <div class="dinings cafeteria">
@@ -107,12 +90,7 @@
                     </a>
                 </div>
 
-                <div class="dinings market">
-                    <a href="/cafeteria.html">
-                        <img src="https://www.ums.edu.my/v5/images/stories/berita_attach/tam.JPG" alt="" srcset="">
-                        <p class="paragraph">Market</p>
-                    </a>
-                </div>
+               
 
                 <div class="dinings vendor">
                     <a href="/cafeteria.html">
@@ -125,88 +103,64 @@
     </section>
 
     <!-- gallery -->
-    <section class="gallery" id="gallery">
+    <section class="gallery">
         <div class="gallery__container container">
-            <h1 class="big__title highlight">Gallery</h1>
+            <div class="small__title">Gallery</div>
+            <h1 class="big__title">Explore visual of our food places</h1>
+            {{-- @dd($gallery) --}}
 
-            <div class="gallery_img">
-                <img src="https://images.pexels.com/photos/827528/pexels-photo-827528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="images">
-                <img src="https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="images">
-                <img src="https://images.pexels.com/photos/840216/pexels-photo-840216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="images">
-                <img src="https://images.pexels.com/photos/6238052/pexels-photo-6238052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="images">
-                <img src="https://images.pexels.com/photos/867452/pexels-photo-867452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="images">
-                <img src="https://images.pexels.com/photos/1785852/pexels-photo-1785852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="images">
-                <img src="https://www.myboost.com.my/wp-content/uploads/2022/04/WhatsApp-Image-2022-03-24-at-10.34.01-AM-1-1024x768.jpeg" alt="" srcset="">
-                <img src="https://assets.nst.com.my/images/articles/SETMEAL13_1657706600.jpg" alt="" srcset="">
-                <img src="https://selangorkini.my/wp-content/uploads/2019/04/PSX_20190409_151225.jpg" alt="" srcset="">
-                <img src="https://pbs.twimg.com/media/FWAdC0baAAAKvIv.jpg:large" alt="" srcset="">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ojJhsamWAKTH5tviZGhWSEMPxHrk9gMfDA&usqp=CAU" alt="" srcset="">
+            <div class="gallery_img"  id="gallery">
+                @foreach ($gallery as $item)
+                @php
+                $imageUrl = $item->image
+                    ? (Str::startsWith($item->image, ['http://', 'https://'])
+                        ? $item->image
+                        : asset('storage/' . $item->image))
+                    : asset('path/to/placeholder-image.jpg');
+                 @endphp
+                     <a href="{{ $imageUrl }}">
+                        <img src="{{ $imageUrl }}" alt="" srcset="" class="image">
+                    </a>
+                @endforeach
             </div>
         </div>
+        <script type="text/javascript">
+            lightGallery(document.getElementById('gallery'), {
+                
+            });
+        </script>
     </section>
 
 
 
     <!-- feedback -->
     <section class="feedback__section" id="feedback">
+        {{-- @dd($feedback) --}}
         <div class="feedback__container container">
             <h3 class="small__title">feedback</h3>
             <h1 class="big__title">What Our Consumers Say</h1>
 
             <div class="feedback">
-                <div class="feedbacks">
-                    <div class="logo">
-                        <i class="ri-double-quotes-r"></i>
+                @foreach ($feedback as $item)
+                    {{-- @dd($item->foodOption) --}}
+                    <div class="feedbacks">
+                        <div class="logo">
+                            <div class="rating"><span class="highlight">{{ $item->rate }}</span> / 5</div>
+                            <!-- <i class="ri-double-quotes-r"></i> -->
+                        </div>
+
+                        <div class="paragraph feedback-customer">
+                            {{ $item->message }}
+                        </div>
+
+                        <p class="credit paragraph">
+                            {{ $item->name }} on <a href="/individual/{{ $item->place_id }}" class="link"><span class="link">{{ $item->foodOption->place_name }} <i class="ri-external-link-line"></i></span></a>
+                        </p>
                     </div>
+                @endforeach
 
-                    <div class="paragraph feedback-customer">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, nostrum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos vitae dolores 
-                        eveniet quidem ex? Velit cupiditate nam dolores eveniet labore tempore rerum 
-                        adipisci placeat nemo hic ab veniam 
-                        sint illum repudiandae eligendi molestiae qui, porro rem accusamus maxime quod animi!
-                    </div>
+                
 
-                    <p class="credit paragraph">
-                        John Doe
-                    </p>
-                </div>
-
-                <div class="feedbacks">
-                    <div class="logo">
-                        <i class="ri-double-quotes-r"></i>
-                    </div>
-
-                    <div class="paragraph feedback-customer">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, nostrum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos vitae dolores 
-                        eveniet quidem ex? Velit cupiditate nam dolores eveniet labore tempore rerum 
-                        adipisci placeat nemo hic ab veniam 
-                        sint illum repudiandae eligendi molestiae qui, porro rem accusamus maxime quod animi!
-                    </div>
-
-                    <p class="credit paragraph">
-                        John Doe
-                    </p>
-                </div>
-
-                <div class="feedbacks">
-                    <div class="logo">
-                        <i class="ri-double-quotes-r"></i>
-                    </div>
-
-                    <div class="paragraph feedback-customer">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, nostrum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos vitae dolores 
-                        eveniet quidem ex? Velit cupiditate nam dolores eveniet labore tempore rerum 
-                        adipisci placeat nemo hic ab veniam 
-                        sint illum repudiandae eligendi molestiae qui, porro rem accusamus maxime quod animi!
-                    </div>
-
-                    <p class="credit paragraph">
-                        John Doe
-                    </p>
-                </div>
             </div>
         </div>
     </section>

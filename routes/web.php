@@ -55,10 +55,13 @@ Route::get('/map',[MapController::class, 'index']);
 
 
 Route::get('/about', function () {
-    return view('about', [
+    return view('UMS.about', [
         'active' => 'about',
+        'type' => 'About',
         'title' => 'About',
-        'style' => ['UMS/wajib']
+        'style' => ['UMS/wajib', 'UMS/about'],
+        'foodPlace' => FoodOption::all(),
+        'user' => App\Models\User::all()
     ]);
 });
 

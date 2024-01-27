@@ -30,11 +30,18 @@
         $mapSlug[] = $item->foodOption->place_slug;
         $placeId[] = $item->foodOption->id;
         
+       
+        $imageUrl = $item->foodOption->image
+            ? (Str::startsWith($item->foodOption->image, ['http://', 'https://'])
+                ? $item->foodOption->image
+                : asset('storage/' . $item->image))
+            : 'https://www.creativefabrica.com/wp-content/uploads/2018/10/Chef-restaurant-logo-by-DEEMKA-STUDIO-4.jpg';
+
         if(!$item->foodOption->image) {
             $placeImage[] = 'https://www.creativefabrica.com/wp-content/uploads/2018/10/Chef-restaurant-logo-by-DEEMKA-STUDIO-4.jpg';
         }
         else {
-            $placeImage[] = $item->foodOption->image;
+            $placeImage[] = $imageUrl;
         }
     }
 
@@ -82,6 +89,7 @@
 var placeNames = @json($mapNames);
 var placeSlugs = @json($mapSlug);
 var indiviualId = @json($placeId);
+
 var placeImage = @json($placeImage);
 
 var placeIds = placeSlugs;
