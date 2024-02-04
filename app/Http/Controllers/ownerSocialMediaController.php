@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Payment;
 use App\Models\FoodOption;
+use App\Models\socialMedia;
 use Illuminate\Http\Request;
 
-class OwnerPaymentController extends Controller
+class ownerSocialMediaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class OwnerPaymentController extends Controller
     {
         //
         $place_id = FoodOption::where('owner_id', auth()->user()->id)->value('id');
-        $payments = Payment::where('place_id', $place_id)->get();
-        return view('UMS.dashboard.payment.ownerPaymentView', [
+        $socialMedia = socialMedia::where('place_id', $place_id)->get();
+        return view('UMS.dashboard.social.ownerSocialView', [
             'style' =>[
                 'admin/adminDashboard',
                 'owner/ownerDashboard',
@@ -24,7 +24,7 @@ class OwnerPaymentController extends Controller
                 'admin/adminCustomerList',
                 'owner/ownerFeedbackList'
             ],
-            'payments' => $payments,
+            'payments' => $socialMedia,
             'type' => 'payment'
         ]);
     }
@@ -35,8 +35,8 @@ class OwnerPaymentController extends Controller
     public function create()
     {
         //
-        return view('UMS.dashboard.payment.ownerPaymentAdd', [
-            'type' => 'openingHour',
+        return view('UMS.dashboard.social.ownerSocialAdd', [
+            'type' => 'social media',
             'style' => [
                 'admin/adminDashboard',
                 'owner/ownerDashboard',
@@ -46,8 +46,6 @@ class OwnerPaymentController extends Controller
 
         ]);
     }
-
-  
 
     /**
      * Store a newly created resource in storage.
@@ -56,42 +54,43 @@ class OwnerPaymentController extends Controller
     {
         //
         $validatedData = $request->validate([
-            'paymentType' => 'required',
-            'description' => 'required'
+            'socialType' => 'required',
+            'link' => 'required',
+            'name' => 'required'
         ]);
 
         $place_id = FoodOption::where('owner_id', auth()->user()->id)->value('id');
 
         $validatedData['place_id'] = $place_id;
+        $validatedData['type'] = $validatedData['socialType'];
 
-        Payment::create($validatedData);
+        socialMedia::create($validatedData);
 
-        return redirect('dashboard/payment')->with('success', 'A menu is added');
+        return redirect('dashboard/media')->with('success', 'A social is added');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Payment $payment)
+    public function show(socialMedia $socialMedia)
     {
         //
-        
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Payment $payment)
+    public function edit(socialMedia $media)
     {
         //
-        return view('UMS.dashboard.payment.ownerPaymentEdit', [
+        return view('UMS.dashboard.social.ownerSocialEdit', [
             'type' => 'openingHour',
             'style' => [
                 'admin/adminDashboard',
                 'owner/ownerDashboard',
                 'admin/adminAnnouncementEdit'
             ],
-            'payment' => $payment,
+            'payment' => $media,
             // 'openingHour' => $openingHour,
 
         ]);
@@ -100,31 +99,38 @@ class OwnerPaymentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Payment $payment)
+    public function update(Request $request, socialMedia $media)
     {
         //
         $validatedData = $request->validate([
             'paymentType' => 'required',
-            'description' => 'required'
+            'link' => 'required',
+            'name' => 'required',
+
         ]);
 
         $place_id = FoodOption::where('owner_id', auth()->user()->id)->value('id');
 
-        $validatedData['place_id'] = $place_id;
+        $updated['place_id'] = $place_id;
+        $updated['type'] = $validatedData['paymentType'];
+        $updated['link'] = $validatedData['link'];
+        $updated['name'] = $validatedData['name'];
 
-        Payment::where('id', $payment->id)->update($validatedData);
 
-        return redirect('dashboard/payment')->with('success', 'A menu is added');
+
+        socialMedia::where('id', $media->id)->update($updated);
+
+        return redirect('dashboard/media')->with('success', 'A media is updated');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Payment $payment)
+    public function destroy(socialMedia $media)
     {
         //
-        Payment::destroy($payment->id);
+        socialMedia::destroy($media->id);
 
-        return redirect('/dashboard/payment')->with('delete', 'Customer has been deleted');
+        return redirect('/dashboard/media')->with('delete', 'Social has been deleted');
     }
 }

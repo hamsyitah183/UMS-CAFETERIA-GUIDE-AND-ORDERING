@@ -11,9 +11,13 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserCartController;
 use App\Http\Controllers\OwnerMenuController;
+use App\Http\Controllers\OwnerPostController;
 use App\Http\Controllers\AdminOwnerController;
 use App\Http\Controllers\FoodOptionController;
+use App\Http\Controllers\OwnerOrderController;
+use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\UserRequestController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\OwnerGalleryController;
 use App\Http\Controllers\OwnerPaymentController;
@@ -25,10 +29,10 @@ use App\Http\Controllers\OwnerFoodOptionController;
 use App\Http\Controllers\ReviewAndRatingController;
 use App\Http\Controllers\adminDashboardAnnouncement;
 use App\Http\Controllers\OwnerOpeningHourController;
+use App\Http\Controllers\ownerSocialMediaController;
 use App\Http\Controllers\ReviewIndividualController;
 use App\Http\Controllers\UserShoppingCartController;
 use App\Http\Controllers\AdminAnnouncementController;
-use App\Http\Controllers\OwnerOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,6 +95,9 @@ Route::get('/individual/{foodOption:id}/order', [MenuController::class, 'order']
 
 Route::get('/individual/{foodOption:id}/map', [MapController::class, 'map']);
 
+Route::get('/individual/{foodOption:id}/post', [FoodOptionController::class, 'post']);
+
+Route::get('/individual/{foodOption:id}/post/{id}', [FoodOptionController::class, 'individualPost']);
 
 
 // Route::resource('/showCart', UserShoppingCartController::class);
@@ -167,6 +174,18 @@ Route::middleware(['auth'])->group(function() {
 
     Route::get('/dashboard/menu/home', [UserDashboardController::class,'menu'])->middleware('userAccess:owner');
     Route::resource('/dashboard/profile', UserProfileController::class);
+    Route::get('/dashboard/profile/password/{user}', [UserProfileController::class, 'editPassword']);
+    Route::put('/dashboard/profile/password/{user}', [UserProfileController::class, 'changedPassword']);
+
+    Route::get('/dashboard/media', [ownerSocialMediaController::class, 'index']);
+    Route::get('/dashboard/media/create', [ownerSocialMediaController::class, 'create']);
+    Route::post('/dashboard/media', [ownerSocialMediaController::class, 'store']);
+    Route::get('/dashboard/media/{media}/edit', [ownerSocialMediaController::class, 'edit']);
+    Route::put('/dashboard/media/{media}', [ownerSocialMediaController::class, 'update']);
+    Route::delete('/dashboard/media/{media}', [ownerSocialMediaController::class, 'destroy']);
+
+
+
     Route::resource('/dashboard/menu', OwnerMenuController::class)->middleware('userAccess:owner');
     Route::resource('/dashboard/customer', AdminCustomerController::class);
     Route::resource('/dashboard/owner', AdminOwnerController::class);
@@ -182,11 +201,18 @@ Route::middleware(['auth'])->group(function() {
 
     Route::resource('/dashboard/map', UserMapController::class);
 
+    
+    Route::resource('/dashboard/post', OwnerPostController::class);
+    Route::get('/dashboard/post/{id}', [OwnerPostController::class, 'show']);
+
+
     Route::get('/dashboard/announcement/checkSlug',[AdminAnnouncementController::class,'checkSlug']);
     Route::get('/dashboard/foodOption/checkSlug',[OwnerFoodOptionController::class,'checkSlug']);
 
     Route::resource('/dashboard/openingHour', OwnerOpeningHourController::class );
     Route::resource('/dashboard/feedback', UserFeedbackController::class);
+
+    Route::post('/dashboard/reply/{feedback}',[UserFeedbackController::class, 'reply']);
 
     
     Route::get('/dashboard/order/list', [OwnerOrderController::class, 'index']);
@@ -196,7 +222,11 @@ Route::middleware(['auth'])->group(function() {
     Route::post('/dashboard/order/processed/{order}', [OwnerOrderController::class, 'orderProcessed']);
     Route::get('/dashboard/order/{order}', [OwnerOrderController::class, 'show']);
 
+    Route::get('/dashboard/request', [UserRequestController::class, 'index']);
+    Route::post('/dashboard/request', [UserRequestController::class, 'store']);
+
     
+
 
     // mesti di bawah ni
     Route::get('/dashboard/{menu:category}', [OwnerMenuController::class, 'category']);

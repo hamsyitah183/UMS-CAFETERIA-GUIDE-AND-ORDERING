@@ -17,6 +17,10 @@
 
     {{-- script --}}
 
+    @elseif (auth()->user()->role == 'admin')
+
+    @include('UMS.dashboard.adminDashboardView')
+
         
     @endif
     

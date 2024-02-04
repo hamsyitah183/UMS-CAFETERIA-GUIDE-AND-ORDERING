@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 class UserProfileController extends Controller
@@ -127,5 +128,48 @@ class UserProfileController extends Controller
     public function destroy(User $user)
     {
         //
+    }
+
+    public function editPassword(User $user) 
+    {
+        $user = User::where('id', auth()->user()->id)->first();
+        // dd($user);
+
+        return view('UMS.dashboard.profile.UserEditPassword', [
+            'style' => [
+                'admin/adminDashboard',
+                'admin/adminAnnouncementEdit'
+
+            ],
+            'type' => 'customer',
+            'customer' => $user
+        ]);
+    }
+
+    public function changedPassword(Request $request, User $user)
+    {
+        //
+        $user = User::where('id', auth()->user()->id)->first();
+
+        $rules = [
+            'password' => 'required',
+            'new_password' => 'required',
+            'confirm_password' => 'required|same:new_password',
+        ];
+
+        if (!Hash::check($request->old_password, $user->password)) {
+            return redirect()->back()->withErrors(['password' => 'Incorrect old password']);
+        }
+       
+    
+
+        $validatedData = $request->validate($rules);
+
+        $validatedData['password'] = $rules['new_password'];
+
+        User::where('id',$user->id )
+        ->update($validatedData);
+
+        return redirect('/dashboard/profile')->with('success', 'Password has been updated successfully.');
     }
 }

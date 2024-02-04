@@ -6,7 +6,7 @@
     <div class="topContent">
         <div class="icon">
             <button class="back">
-                <a href="/dashboard/owner/ownerList.html">
+                <a href="/dashboard/owner">
                     <i class="bi bi-arrow-90deg-left"></i>
                     <span class="word">Return to list</span>
                 </a>
@@ -15,7 +15,8 @@
 
     </div>
 
-    <!-- content -->
+    @if ($owner->foodOption)
+          <!-- content -->
     <div class="content">
         <div class="box1">
             <div class="profile">
@@ -299,6 +300,11 @@
         </div>
     </div>
 
+    @else
+
+    <h2 class="content">No food option is made</h2>
+
+    @endif
     <div class="container">
         <a href="#hero" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line"></i>

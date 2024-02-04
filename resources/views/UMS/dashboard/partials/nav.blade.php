@@ -17,6 +17,8 @@
             </a></li>
 
             
+            @if(Auth::user()->role == 'owner' && Auth::user()->role == 'customer')
+            {
                 <li class="{{ $type === "Order" ? "active" : "" }}">
                 
                     <a href="/dashboard/order"  id="menu" class="menu">
@@ -28,6 +30,8 @@
                    
                     
                 </li>
+            }
+            @endif
               
             
 
@@ -52,6 +56,14 @@
                     <span class="link-name">Owner</span>
                 </a></li>
             @endif
+
+            
+           
+            <li class="{{ $type === "owner" ? "active" : "" }}"><a href="/dashboard/post">
+                <i class="ri-article-line"></i>                  
+                <span class="link-name">Post</span>
+            </a></li>
+           
 
             
                 <li class="{{ $type === "foodOption" ? "active" : "" }}"><a href="/dashboard/foodOption">
@@ -86,10 +98,10 @@
                 <span class="link-name">Feedback</span>
             </a></li>
 
-            <li class="{{ $type === "report" ? "active" : "" }}"><a href="#">
+            {{-- <li class="{{ $type === "report" ? "active" : "" }}"><a href="#">
                 <i class="bi bi-newspaper"></i>
                 <span class="link-name">Report</span>
-            </a></li>
+            </a></li> --}}
 
             @if (auth()->user()->role == 'owner')
                 <li class="{{ $type === "gallery" ? "active" : "" }}">

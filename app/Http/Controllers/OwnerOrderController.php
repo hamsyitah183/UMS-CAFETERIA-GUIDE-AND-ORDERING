@@ -119,7 +119,7 @@ class OwnerOrderController extends Controller
             "*Name:* " . $name .   "\n" .
             $orderInfo .
             "*Email:* " . $email . "\n" .
-            "*Message:* " . $message . "\n" .
+            // "*Message:* " . $message . "\n" .
             $text;
 
         $url = "https://wa.me/+6{$order->user->no_phone}?text=" . urlencode($whatsappMessage);

@@ -39,6 +39,7 @@
                     <th>Name</th>
                     <th>Feedback</th>
                     <th>Activity</th>
+                    <th>Reply</th>
                 </tr>
             </thead>
 {{-- @dd($feedbacks) --}}
@@ -65,6 +66,10 @@
                                 <li class="delete"><a href="#"><button><i class="bi bi-trash"></i>Delete</button></a></li>
                             @endif
                         </ul>
+                    </td>
+
+                    <td>
+                        {{ $feedback->reply->count() }} replies
                     </td>
                 </tr>
                 

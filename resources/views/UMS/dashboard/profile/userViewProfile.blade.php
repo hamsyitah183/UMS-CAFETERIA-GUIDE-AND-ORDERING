@@ -19,11 +19,12 @@
     <div class="left">
         <div class="img">
             @php
+             
                 $imageUrl = $user->image
                     ? (Str::startsWith($user->image, ['http://', 'https://'])
                         ? $user->image
                         : asset('storage/' . $user->image))
-                    : asset('path/to/placeholder-image.jpg');
+                    : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg';
             @endphp
             <img src="{{ $imageUrl }}" alt="" srcset="">
         </div>
@@ -36,6 +37,9 @@
     </div>
 </div>
 
+<div class="profileBox2">
+    <h3 ><a href="/dashboard/profile/password/{{ $user->id }}" style="color: black">Changed password <i class="ri-lock-fill"></i></a></h3>
+</div>
 
 <div class="profileBox2">
 <h3>Contact information:</h3>
@@ -107,7 +111,7 @@
                 <h4>Phone:</h4>
             </div>
             <div class="col2">
-                <p>{{ $user->role }}</p>
+                <p>{{ $user->no_phone }}</p>
             </div>
         </div>
 
@@ -116,9 +120,11 @@
                 <h4>Role:</h4>
             </div>
             <div class="col2">
-                <p>Customer</p>
+                <p>{{ $user->role }}</p>
             </div>
         </div>
     </div>
 </div>
+
+
 @endsection

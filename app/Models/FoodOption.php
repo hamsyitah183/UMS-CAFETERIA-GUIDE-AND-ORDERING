@@ -111,4 +111,9 @@ class FoodOption extends Model
     {
         return $this->hasMany(OwnerPost::class, 'place_id');
     }
+
+    public function social()
+    {
+        return $this->hasMany(socialMedia::class, 'place_id');
+    }
 }

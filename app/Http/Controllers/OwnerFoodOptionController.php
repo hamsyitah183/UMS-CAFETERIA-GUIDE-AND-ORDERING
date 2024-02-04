@@ -166,6 +166,7 @@ class OwnerFoodOptionController extends Controller
     public function show(FoodOption $foodOption)
     {
         //
+        
     }
 
     /**

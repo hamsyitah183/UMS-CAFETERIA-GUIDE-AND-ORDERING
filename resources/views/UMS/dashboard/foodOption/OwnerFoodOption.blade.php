@@ -163,54 +163,56 @@
                     <div class="infos">
                         <div class="socialMedia">
                             <h1>Social Media</h1>
-                            <button class="btn edit"><a href=""><i class="ri-pencil-line"></i> Edit</a></button>
-                            <div class="media">
-                                
-                                    <div class="icon">
-                                        <i class="ri-facebook-circle-fill"></i>
-                                    </div>
-                                
-                                    <div class="accountName">
-                                        <a href="#">Cafe XYZ</a>
-                                    </div>
+                            <button class="btn edit"><a href="/dashboard/media/"><i class="ri-pencil-line"></i> Edit</a></button>
+                            @if ($owner[0]->foodOption)
+                                @if ($owner[0]->foodOption->social)
+                                @foreach ($owner[0]->foodOption->social as $item)
+                                <div class="media">
+                                    @php
+                                        if($item->type == 'facebook')
+                                        {
+                                            $icon = '<i class="ri-facebook-circle-fill"></i>';
+                                        }
+                                        elseif($item->type == 'youtube')
+                                        {
+                                            $icon = '<i class="ri-youtube-fill"></i>';
+                                        }
+                                        elseif($item->type == 'whatsapp')
+                                        {
+                                            $icon = '<i class="ri-whatsapp-fill"></i>';
+                                        }
+                                        elseif($item->type == 'twitter')
+                                        {
+                                            $icon = '<i class="ri-twitter-fill"></i>';
+                                        }
+                                        
+                                        elseif($item->type == 'instagram')
+                                        {
+                                            $icon = '<i class="ri-instagram-fill"></i>';
+                                        }
+                                        elseif ($item->type == 'Others') {
+                                            # code...
+                                            $icon = '<i class="ri-links-line"></i>';
+                                        }
+
+                                    @endphp
+                                    {{-- @dd($owner[0]->foodOption->social) --}}
                                     
-                            </div>
+                                        <div class="icon">
+                                            {!! $icon !!}
+                                        </div>
+                                    
+                                        <div class="accountName">
+                                            <a href="{{ $item->link }}" target="_blank">{{ $item->name }}</a>
+                                        </div>
+                                        
+                                </div>
+                            @endforeach
+                                @else
+                                    <p>No data yet</p>
+                                @endif
+                            @endif
     
-                            <div class="media">
-                                
-                                <div class="icon">
-                                    <i class="ri-twitter-fill"></i>                           
-                                </div>
-                            
-                                <div class="accountName">
-                                    <a href="#">Cafe XYZ</a>
-                                </div>
-                                
-                            </div>
-    
-                            <div class="media">
-                                
-                                <div class="icon">
-                                    <i class="ri-instagram-line"></i>
-                                </div>
-                            
-                                <div class="accountName">
-                                    <a href="#">Cafe XYZ</a>
-                                </div>
-                                
-                            </div>
-    
-                            <div class="media">
-                                
-                                <div class="icon">
-                                    <i class="ri-whatsapp-line"></i>
-                                </div>
-                            
-                                <div class="accountName">
-                                    <a href="#">Cafe XYZ</a>
-                                </div>
-                                
-                            </div>
     
                         </div>
 

@@ -11,16 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('requests', function (Blueprint $table) {
+        Schema::create('social_media', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('place_id')->references('id')->on('food_options')->onDelete('cascade');
+            $table->string('type');
+            $table->string('link');
             $table->string('name');
-            $table->string('username');
-            $table->string('place_name');
-            $table->string('place_slug')->unique();
-            $table->string('question');
-            $table->string('phoneNumber')->nullable();
-            $table->string('image')->nullable();
-
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('requests');
+        Schema::dropIfExists('social_media');
     }
 };

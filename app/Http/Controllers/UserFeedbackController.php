@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Feedback;
+use App\Models\Reply;
 use Illuminate\Http\Request;
 
 class UserFeedbackController extends Controller
@@ -97,9 +98,27 @@ class UserFeedbackController extends Controller
         ]);
     }
 
+    public function reply(Request $request, Feedback $feedback)
+    {
+        $validatedData = $request->validate([
+            'message' => 'required',
+        ]);
+
+
+        $user = User::find(auth()->user()->id);
+
+        $validatedData['user_id'] = $user->id;
+        $validatedData['feedback_id'] = $feedback->id;
+
+        Reply::create($validatedData);
+
+        return redirect('/dashboard/feedback/'. $feedback->id);
+    }
+
     /**
      * Show the form for editing the specified resource.
      */
+
     public function edit(Feedback $feedback)
     {
         //

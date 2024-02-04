@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Menu;
 use App\Models\Gallery;
 
+use App\Models\OwnerPost;
 use App\Models\PlaceType;
 use App\Models\FoodOption;
 use App\Models\OpeningHours;
@@ -95,6 +96,43 @@ class FoodOptionController extends Controller
                         ->get()
         ]);
     }
+
+    public function post(FoodOption $foodOption)
+    {
+        // @dd(request('searchIndividual'));
+       $post = OwnerPost::where('place_id', $foodOption->id)->get();
+    //    dd($post);
+        return view('UMS/post', [
+            'type' => 'Post',
+            'active' => 'about',
+            'title' => 'About',
+            'style' => [
+                'UMS/wajib',
+                'UMS/homepage',
+                'UMS/announcement'
+            ],
+            'announcements' => $post,
+        ]);
+    }
+
+    public function individualPost(FoodOption $foodOption, $id)
+    {
+        $post = OwnerPost::where('place_id', $foodOption->id)->where('id', $id)->first();
+
+        return view('UMS.postView', [
+            'type' => 'Post',
+            'active' => 'about',
+            'title' => 'About',
+            'style' => [
+                'UMS/wajib',
+                'UMS/homepage',
+                'UMS/announcementIndividual'
+            ],
+            'announcement' => $post,
+        ]);
+    }
+
+    
 
     /**
      * Show the form for creating a new resource.

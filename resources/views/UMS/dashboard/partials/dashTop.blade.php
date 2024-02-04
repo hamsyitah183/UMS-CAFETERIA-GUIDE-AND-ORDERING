@@ -33,7 +33,7 @@
                 ? $item->image
                 : asset('storage/' . $item->image))
             // : asset('path/to/placeholder-image.jpg');
-                : 'https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg'
         @endphp
 
         <div class="profile">

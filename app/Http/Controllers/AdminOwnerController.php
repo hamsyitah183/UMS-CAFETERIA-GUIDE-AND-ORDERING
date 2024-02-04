@@ -54,7 +54,21 @@ class AdminOwnerController extends Controller
 
         $validatedData['password'] = bcrypt('12345');
 
+        $name = $validatedData['name'];
+        $username = $validatedData['username'];
+        $email = $validatedData['email'];
+        $no_phone = $validatedData['no_phone'];
+
         User::create($validatedData);
+
+        $text = 'Hello, this is UMS Cafeteria Guide and Ordering' . "\n";
+        $text .= "Your username is: " . $username . ". Your name is: " . $name . "\n";
+        $text .= "Your password to the system is 12345. Please login and change the password.";
+
+        $url = "https://wa.me/+6{$no_phone}?text=" . urlencode($text);
+        return redirect()->away($url);
+
+        // User::create($validatedData);
 
         return redirect('dashboard/owner')->with('success', 'An owner is created');
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\FoodOptionChart;
 use App\Models\Menu;
 use App\Models\User;
 use App\Models\Order;
@@ -15,13 +16,18 @@ use Illuminate\Support\Facades\DB;
 class UserDashboardController extends Controller
 {
     //
-    public function index(Request $request)
+    public function index(Request $request, FoodOptionChart $chart)
     {
         if(auth()->user()->role == 'admin') {
             return view('UMS.dashboard.adminDashboard', [
                 'type' => 'Dashboard',
                 'active' => 'active',
                 'style' => ['admin/adminDashboard'],
+                'chart' => $chart->build(),
+                'announcements' => Announcement::where('user_id',auth()->user()->id )->get(),
+                'foodOption' => FoodOption::all(),
+                'user' => User::all(),
+                'order' => Order::latest()->take('15')->get()
             ]);
         }
         elseif(auth()->user()->role == 'owner') {
@@ -29,8 +35,8 @@ class UserDashboardController extends Controller
             return view('UMS.dashboard.adminDashboard', [
                 'type' => 'Dashboard',
                 'style' => [
-                    'admin/adminDashboard',
                     'owner/ownerDashboard',
+                    'admin/adminDashboard',
                     'owner/owner'
                 ],
                 'owners' => User::where('id', auth()->user()->id)->get(),
