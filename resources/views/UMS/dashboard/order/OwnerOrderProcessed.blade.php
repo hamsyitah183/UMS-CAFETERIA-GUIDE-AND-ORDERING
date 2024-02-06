@@ -1,6 +1,6 @@
 <div class="orderPending processOrder">
     <h1>Processed Order</h1>
-    <p>18 Jan 2024</p>
+    <p>{{ date('d M Y') }}</p>
     
     <div class="orderPendingTable table">
         

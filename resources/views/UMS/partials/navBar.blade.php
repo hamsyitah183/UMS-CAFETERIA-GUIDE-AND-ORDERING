@@ -5,6 +5,8 @@
             <a href="#" class="nav__logo">
              <i class="bi bi-egg-fried"></i> UMS Cafeteria Guide and Ordering 
             </a>
+
+            
             
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-line nav__burger"></i>
@@ -43,6 +45,7 @@
 
         <!--=============== NAV MENU ===============-->
         <div class="nav__menu" id="nav-menu">
+            
            <ul class="nav__list">
               <li><a href="/" class="nav__link">Home</a></li>
 
@@ -132,7 +135,7 @@
 
                 <div class="searchBox">
                     <form action="/search">
-                        <input type="text" name="" id="" placeholder="Search..."> 
+                        <input type="text" name="search" id="" placeholder="Search..."> 
                         <button type="submit">Search</button>
                     </form>
                 </div>

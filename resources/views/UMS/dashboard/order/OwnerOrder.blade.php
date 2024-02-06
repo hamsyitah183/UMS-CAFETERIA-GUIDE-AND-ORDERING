@@ -16,7 +16,7 @@
 <div class="middle">
     <div class="orderPending">
         <h1>Pending Order</h1>
-        <p>18 Jan 2024</p>
+        <p>{{ date('d M Y') }}</p>
         
         @include('UMS.dashboard.order.OwnerOrderPending')
 

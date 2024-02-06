@@ -23,7 +23,7 @@ class OwnerGalleryController extends Controller
             if($place_id) {
                 $galleries = Gallery::all()->where('place_id', $place_id);
                 return view('UMS.dashboard.gallery.OwnerGallery', [
-                    'type' => 'announcement',
+                    'type' => 'gallery',
                     'style' => [
                         'admin/adminDashboard',
                         'owner/ownerDashboard',

@@ -22,7 +22,11 @@ class UserDashboardController extends Controller
             return view('UMS.dashboard.adminDashboard', [
                 'type' => 'Dashboard',
                 'active' => 'active',
-                'style' => ['admin/adminDashboard'],
+                'style' => [
+                    'admin/adminDashboard',
+                   
+                
+                ],
                 'chart' => $chart->build(),
                 'announcements' => Announcement::where('user_id',auth()->user()->id )->get(),
                 'foodOption' => FoodOption::all(),

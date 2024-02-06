@@ -71,8 +71,27 @@
     </div>
 
     <div class="date">
-        <span id="date"></span>
+        <span id="date">{{ date('d M Y') }}</span>
     </div>
+
+    <div class="categories">
+        <div class="category {{ request()->is('dashboard/menu') ? 'chosen' : '' }}">
+            <h3><a href="/dashboard/menu">All</a></h3>
+        </div>
+
+        <div class="category  {{ request()->is('dashboard/breakfast') ? 'chosen' : '' }}" >
+            <h3><a href="/dashboard/breakfast">Breakfast</a></h3>
+        </div>
+
+        <div class="category  {{ request()->is('dashboard/lunch') ? 'chosen' : '' }}">
+            <h3><a href="/dashboard/lunch">Lunch</a></h3>
+        </div>
+
+        <div class="category  {{ request()->is('dashboard/drinks') ? 'chosen' : '' }}">
+            <h3><a href="/dashboard/drinks">Drink</a></h3>
+        </div>
+    </div>
+
 
    <h2 class="small__title"><i class={{ $icon }}></i> {{ $name }}</h2>
     

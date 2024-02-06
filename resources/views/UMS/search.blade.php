@@ -52,8 +52,15 @@
                                     @endphp
                                 
                                 @endif
+                                @php
+                                    $imageUrl = $item->image
+                                        ? (Str::startsWith($item->image, ['http://', 'https://'])
+                                            ? $item->image
+                                            : asset('storage/' . $item->image))
+                                        : asset('path/to/placeholder-image.jpg');
+                                @endphp
                                 <a href="/individual/{{ $item->id }}">
-                                    <img src="{{ $item->image }}">
+                                    <img src="{{ $imageUrl }}">
                                 </a>
                             </div>
                             @php

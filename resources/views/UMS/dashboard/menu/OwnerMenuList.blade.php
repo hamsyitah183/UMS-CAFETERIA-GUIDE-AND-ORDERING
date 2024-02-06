@@ -19,6 +19,7 @@
         $items = $category;
         $icon = 'ri-sun-foggy-line';
         $name = 'Menu';
+        $back = '/dashboard/menu';
     @endphp
 
 
@@ -27,6 +28,7 @@
         $items = $breakfasts;
         $icon = 'ri-sun-foggy-line';
         $name = 'Breakfast';
+        $back = '/dashboard/breakfast';
     @endphp
 
 @elseif (request()->is('dashboard/menu/list/lunch'))
@@ -34,6 +36,7 @@
         $items = $lunchs;
         $icon = 'ri-sun-line';
         $name = 'Lunch';
+        $back = '/dashboard/lunch';
     @endphp
 
 @elseif (request()->is('dashboard/menu/list/drink'))
@@ -41,11 +44,13 @@
         $items = $drinks;
         $icon = 'bi bi-cup-straw';
         $name = 'Drink';
+        $back = '/dashboard/drink';
     @endphp
 
 
     
 @endif
+
 
 <div class="overview">
     <div class="title">
@@ -55,8 +60,16 @@
     </div>
 
     <div class="date">
-        <span id="date"></span>
+        <span id="date">{{ date('d M Y') }}</span>
     </div>
+
+
+
+
+    <div class="button" style="margin-bottom: 20px">
+        <button class="btn" style="border-radius: 10px; width: fit-length; padding: 5px"><a href="{{ $back }}" style="color:white">Back</a></button>
+    </div>
+
 
    <h2 class="small__title"><i class="{{ $icon }}"></i> {{ $name }}</h2>
     
@@ -140,7 +153,7 @@
                         <ul class="activity">
                             <li class="view"><a href="/dashboard/menu/{{ $item->id }}"><button><i class="bi bi-eye"></i> View</button></a></li>
                             <li class="edit"><a href="/dashboard/menu/{{ $item->id }}/edit"><button><i class="bi bi-pencil-square"></i> Edit</button></a></li>
-                            <form action="/dashboard/menu/{{ $item->id }}" method="post">
+                            <form action="/dashboard/menu/{{ $item->id }}" method="post" style="margin-top: -1px">
                                 @method('delete')
                                 @csrf
                                 <li class="delete" onclick="return confirm('are you sure?')">

@@ -1,3 +1,15 @@
+<style>
+    .home {
+        background: #BCCC9A;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .home  .link-name{
+        color: white;
+    }
+</style>
+
 <nav>
     <div class="logo-name">
         <!-- <div class="logo-image">
@@ -9,7 +21,16 @@
     </div>
 
     <div class="menu-items">
+
+        
+
         <ul class="nav-links">
+
+            <li class="home"><a href="/" >
+                <i class="bi bi-egg-fried" style="color: white"></i>
+                <span class="link-name" style="color: white">Home</span>
+            </a></li>
+
             
             <li class="{{ $type === "Dashboard" ? "active" : "" }} " ><a href="/dashboard" >
                 <i class="ri-home-8-line"></i>
@@ -17,8 +38,8 @@
             </a></li>
 
             
-            @if(Auth::user()->role == 'owner' && Auth::user()->role == 'customer')
-            {
+            @if(Auth::user()->role == 'owner' || Auth::user()->role == 'customer')
+            
                 <li class="{{ $type === "Order" ? "active" : "" }}">
                 
                     <a href="/dashboard/order"  id="menu" class="menu">
@@ -30,7 +51,7 @@
                    
                     
                 </li>
-            }
+            
             @endif
               
             

@@ -42,8 +42,9 @@ class OwnerFoodOptionController extends Controller
             return view('UMS.dashboard.foodOption.OwnerFoodOption', [
                 'type' => 'foodOption',
                 'style' => [
-                    'admin/adminDashboard',
                     // 'owner/ownerDashboard',
+                    'admin/adminDashboard',
+                    
                     'owner/ownerFoodOption'
                 ],
                 'owner' => $owner

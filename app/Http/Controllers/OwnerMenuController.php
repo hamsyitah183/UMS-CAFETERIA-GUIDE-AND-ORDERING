@@ -150,7 +150,7 @@ class OwnerMenuController extends Controller
         }
 
         Menu::where('id', $menu->id)->update($validatedData);
-        return redirect('dashboard/menu/list/all')->with('success', 'A menu is updated');
+        return redirect('dashboard/menu/ /all')->with('success', 'A menu is updated');
     }
 
     /**

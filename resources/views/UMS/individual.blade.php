@@ -288,7 +288,19 @@
                     <div class="item">
                         <div class="top">
                             <div class="img">
-                                <img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                @if ($review->user && $review->user->username)
+                                @php
+                                    $imageUrl = $review->user->image
+                                        ? (Str::startsWith($review->user->image, ['http://', 'https://'])
+                                            ?$review->user->image
+                                            : asset('storage/' . $review->user->image))
+                                        : 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg';
+                                @endphp
+                                <img src="{{ $imageUrl }}" alt="" srcset="">
+                                @else
+                    
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg" alt="" srcset="">
+                                @endif
                             </div>
                             <div class="top_content">
                                 <div class="name">

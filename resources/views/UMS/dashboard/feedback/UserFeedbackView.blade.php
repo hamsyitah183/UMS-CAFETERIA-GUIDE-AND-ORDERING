@@ -40,6 +40,16 @@
         color: white;
         padding: 10px
     }
+
+    .box2.notAdmin.yada {
+        margin-left: 100px;
+        background: white;
+        color: #FF6347;
+    }
+
+    .box2.notAdmin.yada p {
+        color: #FF6347;
+    }
 </style>
 
 <!-- search box and title -->
@@ -77,10 +87,29 @@
     
 
     {{-- reply --}}
-
+    @php
+        $repliesUser = $feedback->reply->whereNotIn('user_id', auth()->user()->id);
+        $repliesAdmin = $feedback->reply->where('user_id', auth()->user()->id);
+    @endphp
     @if ($feedback->reply)
         @foreach ($feedback->reply as $item)
-        <div class="{{ auth()->user()->role === 'admin' ? 'box1 box2' : 'box1 box2 notAdmin' }}" style="margin-bottom: 10px;">
+        
+            
+        
+       
+        @php
+            if($item->user_id == auth()->user()->id ) {
+                $class = 'box1 box2';
+            }
+
+            else {
+                # code...
+                $class = 'box1 box2 notAdmin yada';
+            }
+
+        @endphp
+       
+        <div class="{{ $class }}" style="margin-bottom: 10px;">
            
             <div class="from">
                
@@ -99,7 +128,7 @@
         @endforeach
     @endif
 
-    @if (auth()->user()->role == 'admin')
+    
         <div class="box1 reply">
             <form action="/dashboard/reply/{{ $feedback->id }}" method="post">
                 @csrf
@@ -111,7 +140,7 @@
             </div>
             </form>
         </div>
-    @endif
+  
     
 </div>
 

@@ -24,6 +24,10 @@ crossorigin=""></script>
 </div>
 {{-- @dd($order->foodOption->map) --}}
 
+<div class="button">
+    <button class="btn" style="border-radius: 10px; width: fit-length; padding: 5px"><a href="/dashboard/order" style="color:white">Back</a></button>
+</div>
+
 <div class="content">
     <h1 class="orderId">Order ID: {{ $order->id }}</h1>
     <h2 class="customerNotes"><b>Customer notes: </b>{{ $order->order_notes }}</h2>
