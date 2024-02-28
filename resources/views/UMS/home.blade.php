@@ -15,7 +15,7 @@
                     </div>
         
                     <div class="announcement__title">
-                        <h2><a href="/UMS/Announcement/{{ $a->slug }}">{{ $a->title }}</a></h2>
+                        <h2><a href="/announcement/{{ $a->slug }}">{{ $a->title }}</a></h2>
                         
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                 </p>
 
                 <button class="btn">
-                    Read more
+                    <a href="/about">Read more</a>
                 </button>
                 
         </div>
@@ -77,14 +77,14 @@
 
             <div class="dining">
                 <div class="dinings cafeteria">
-                    <a href="/cafeteria.html">
+                    <a href="/foodOption/cafeteria">
                         <img src="https://images.pexels.com/photos/2067638/pexels-photo-2067638.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" srcset="">
                         <p class="paragraph">Cafeteria</p>
                     </a>
                 </div>
 
                 <div class="dinings kiosk">
-                    <a href="/cafeteria.html">
+                    <a href="/foodOption/kiosk">
                         <img src="https://static.wixstatic.com/media/beaaa8_b6c286b4e81c4e2da5e97218b1cb8009~mv2.jpg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/beaaa8_b6c286b4e81c4e2da5e97218b1cb8009~mv2.jpg" alt="" srcset="">
                         <p class="paragraph">Kiosk</p>
                     </a>
@@ -93,7 +93,7 @@
                
 
                 <div class="dinings vendor">
-                    <a href="/cafeteria.html">
+                    <a href="/foodOption/vendor">
                         <img src="https://bloximages.chicago2.vip.townnews.com/theeagle.com/content/tncms/assets/v3/editorial/6/2c/62c395ea-6e95-11e5-aa75-07e781912c59/55a89333954d2.image.jpg?resize=1200%2C793" alt="" srcset="">
                         <p class="paragraph">Food vendor</p>
                     </a>

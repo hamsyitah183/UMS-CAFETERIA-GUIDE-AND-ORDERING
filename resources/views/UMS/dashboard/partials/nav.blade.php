@@ -80,7 +80,7 @@
 
             
            
-            <li class="{{ $type === "owner" ? "active" : "" }}"><a href="/dashboard/post">
+            <li class="{{ $type === "post" ? "active" : "" }}"><a href="/dashboard/post">
                 <i class="ri-article-line"></i>                  
                 <span class="link-name">Post</span>
             </a></li>

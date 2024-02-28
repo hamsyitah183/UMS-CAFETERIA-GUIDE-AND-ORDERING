@@ -51,6 +51,21 @@ class OwnerFoodOptionController extends Controller
             ]);
         }
 
+        else {
+            $foodOption = FoodOption::all();
+        
+            return view('UMS.dashboard.foodOption.AdminFoodOption', [
+                'type' => 'foodOption',
+                'style' => [
+                    'admin/adminDashboard',
+                    'admin/adminAnnouncement',
+                    'admin/adminCustomer'
+                ],
+                'customers'=> $foodOption
+
+            ]);
+        }
+
         
        
     }

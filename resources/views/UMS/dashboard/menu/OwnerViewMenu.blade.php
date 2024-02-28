@@ -101,14 +101,15 @@
     @include('UMS.dashboard.menu.OwnerMenuHome')
 @endif
 
+    @include('UMS.dashboard.menu.menuTodayPick')
 
-    @include('UMS.dashboard.menu.menuLatestAddition');
+    @include('UMS.dashboard.menu.menuLatestAddition')
  
 
 
 
 
-@include('UMS.dashboard.menu.menuPopular');
+@include('UMS.dashboard.menu.menuPopular')
 
 
 {{-- @include('UMS.dashboard.menu.menuReview'); --}}

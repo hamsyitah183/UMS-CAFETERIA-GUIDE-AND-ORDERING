@@ -61,7 +61,7 @@
                             </div>
 
                             <div class="place__button">
-                                <button class="btn"><a href="/individual/{{ $place->id }}/menu">Menu</a></button>
+                                <button class="btn"><a href="/individual/{{ $place->id }}/menu" style="color: white">Menu</a></button>
 
                             <button class="btn secondary">Location</button>
                         </div>

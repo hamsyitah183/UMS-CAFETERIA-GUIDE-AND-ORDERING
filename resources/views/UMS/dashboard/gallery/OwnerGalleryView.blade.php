@@ -23,7 +23,7 @@
 @section('dash-content')
 
 <div class="button return">
-    <button class="btn"><a href="{{ url()->previous() }}">See gallery list</a></button>
+    <button class="btn"><a href="/dashboard/gallery">See gallery list</a></button>
 
 </div>
 

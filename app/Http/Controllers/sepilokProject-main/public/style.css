@@ -1,0 +1,922 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --main-color: #fff;
+  --sub-color: #0F8514;
+  --border: .1rem solid rgba(220, 198, 156, .3);
+}
+
+/* HEADER MAIN PAGE - TOURIST*/
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+section {
+  margin: 100px 0;
+  padding: 100px 0;
+  height: 100%;
+  
+}
+
+body {
+  padding: 0;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.login{
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header, .footer, .sidebar, .contact {
+  left: 0;
+  background-color: var(--sub-color);
+  padding: 15px 15px;
+  width: 100%;
+  margin: 0 auto; 
+}
+
+.header, .sidebar {
+  position: fixed;
+  top: 0;
+}
+
+.footer {
+  bottom: 0;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.header .navbar .book {
+  cursor: pointer;
+  background-color: #eff542;
+  border-radius: 12px;
+  border: 2px solid #0F8514;
+  font-size: 1.5rem;
+  color: var(--sub-color);
+  text-align: center;
+  text-decoration: none;
+}
+
+.header .navbar .book:hover {
+  background-color: var(--main-color);
+  padding: 1.5rem 1.5rem;
+  cursor: pointer;
+  color: #0F8514;
+  transition: 1s, padding 1s;
+
+}
+
+.header .navbar {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+  background-color: var(--sub-color);
+}
+
+.header .navbar .user {
+  font-size: 30px;
+}
+
+.header .navbar a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--main-color);
+  padding: 0.5rem 0.5rem;
+}
+
+.header .navbar a:hover {
+  color: #eff542;
+}
+
+.header .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header .flex .logo {
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+  /* dropdown bar */
+
+  .menu {
+      font-size: 2.5rem;
+      cursor: pointer;
+      color: var(--main-color);
+      display: none;
+  }
+
+  .menu:hover {
+      color: #eff542;
+  }
+
+  /* dropdown bar */
+
+
+/* HEADER MAIN PAGE - TOURIST*/
+
+
+/* MAIN CONTENT - TOURIST*/
+
+.content {
+  background-color: var(--main-color);
+  margin: 0 auto;
+  height: 100%;
+}
+
+.contact {
+  background-color: var(--main-color);
+  margin: 100px auto;
+  margin-bottom: 300px;
+  padding: 100px 0;
+  height: 100%;
+}
+
+.content-page {
+  margin: 0 auto;
+}
+
+.banner {
+  padding: 1rem 1rem;
+  width: 100%;
+}
+
+.content-info, .contact-content{
+  float: left;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-content .submit_bttn {
+  color: #000000;
+}
+
+.content-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-content h3 {
+  font-size: 3rem;
+}
+
+.content-info h4 {
+  font-size: 1.8rem;
+}
+
+.content-info h3 {
+  font-size: 2.5rem;
+}
+
+.content-info, .contact-content ul li {
+  font-size: 1.5rem;
+}
+
+.content-info .content-news, .content-ann {
+  background-color: rgb(92, 179, 179);
+  border-radius: 15px;
+  border-style: ridge;
+  border-width: 2px;
+  border-color: #12171e;
+  margin: 10px;
+  padding: 5px;
+}
+
+.content-info .content-news ul {
+  list-style-type: none;
+}
+
+
+.contact-container label {
+  display: flex;
+  padding: 5px;
+  font-size: 2rem;
+}
+
+.contact-container input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+.contact-container select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-content .contactCategory {
+  margin-top: 20px;
+  width: 25%;
+}
+
+.contactMessage input {
+  height: 100px;
+}
+/* MAIN CONTENT - TOURIST*/
+
+/* CONTACT FORM */
+
+.contact-table {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+   
+}
+
+.contact .tablecontact {
+  margin-left: auto; 
+  margin-right: auto;
+}
+/* CONTACT FORM*/
+
+/* FOOTER - TOURIST*/
+
+.footer-content {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+}
+
+.footer-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer-content h3 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+
+.footer-content .footer-info {
+  list-style-type: none;
+  font-size: 1.4rem;
+  color: #eff542;
+}
+
+.footer-content .footer-info i {
+  font-size: 22px;
+}
+
+/* FOOTER - TOURIST*/
+
+/* BOOKING FORM */
+
+.booking {
+  background-color: var(--main-color);
+  margin: 150px auto;
+  height: 100%;
+}
+
+.booking .open-button {
+  justify-items: center;
+  margin: 15px;
+  padding: 0 auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.booking-tourist::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.booking-tourist {
+  width: 800px;
+  padding: 16px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-color);
+}
+
+.booking-tourist form {
+  margin: 10px;
+  padding: 20px;
+  background-color: #bebebe;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.booking-tourist h3 {
+  font-size: 2rem;
+  display: flex;
+  text-align: center;
+}
+
+.booking-tourist .notice {
+  color: #ff0000;
+}
+
+.booking  .open-button {
+  font-size: 1.5rem;
+}
+
+.bookingList .open-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.booking-tourist select {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.bookingList {
+  margin: 100px auto;
+  padding: 10px;
+  display: none;
+}
+
+.bookingL
+
+/* BOOKING FORM - TOURIST */
+
+/* BOOKING FORM - STAFF */
+
+.staffbooking h2 {
+  padding: 3rem ;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.staffbooking_list {
+  margin: 5px;
+  padding: px;
+  border-radius: 10px;
+}
+
+/* BOOKING FORM - STAFF */
+
+/* INVENTORY PAGE - STAFF */
+
+.inv {
+  margin: 100px 0;
+  padding: 100px 0;
+  height: 100%;
+}
+
+.inv_list .open-button {
+  background-color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.8;
+  right: 28px;
+  width: 280px;
+
+}
+
+.inv_table h2 {
+  padding: 3rem ;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.inv_table .create {
+  display: flex;
+  align-items: center;
+}
+
+
+.inv .tableInv {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.inv-form {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inv-form form {
+  width: 50%; /* Adjust the width of the form as needed */
+  position: absolute;
+  padding: 20px;
+  margin: 10px auto;
+  z-index: 1; /* Sit on top */
+  transform: translate(50%, 50%);
+  background-color: #bebebe;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.inv-form form button {
+  margin-top: 10px; /* Adjust the margin as needed for spacing between buttons */
+  display: flex;
+  align-items: center;
+}
+
+.inv-form label {
+  display: inline-block;
+  width: 50%; /* Adjust the width as needed */
+}
+
+.inv-form select {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Clearfix to prevent wrapping issues */
+.inv-form::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* INVENTORY PAGE - STAFF */
+
+/* EDITS FORM */
+
+/* EDITS FORM */
+
+.editForm form {
+  width: 50%; /* Adjust the width of the form as needed */
+  position: absolute;
+  padding: 20px;
+  margin: 10px auto;
+  transform: translate(50%, 50%);
+  background-color: #bebebe;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+
+/* STAFF PAGE - ADMIN */
+
+.register, .staffProfile, .dashboard {
+    margin: 100px 0;
+    padding: 100px 0;
+    height: 100%;
+}
+
+.register, .staffProfile h2 {
+  padding: 3rem ;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.newStaff {
+  /* display: none; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.newStaff form {
+  width: 50%; /* Adjust the width of the form as needed */
+  margin: 10px auto; 
+  padding: 20px;
+  background-color: #bebebe;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.newStaff form button {
+  margin-top: 10px; /* Adjust the margin as needed for spacing between buttons */
+  display: flex;
+  align-items: center;
+}
+
+/* Clearfix to prevent wrapping issues */
+.newStaff::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.newStaff textarea {
+  flex: 1;
+  box-sizing: border-box;
+}
+/* STAFF PAGE - ADMIN */
+
+/* Check */
+
+.check-form form{
+  width: 50%; /* Adjust the width of the form as needed */
+  position: absolute;
+  padding: 20px;
+  transform: translate(50%, 50%);
+  background-color: #bebebe;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.checkIn_Out{
+  display: flex;
+  justify-content: center;
+}
+.checkIn_Out ul {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 10px auto;
+}
+.checkIn_Out ul li {
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.checkIn_Out ul a {
+  font-size: 1.2rem;
+  color: #fff; 
+  display: flex;
+  justify-content: center;
+  border-radius: 0.8rem;
+}
+
+.checkIn_Out ul h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+/* Check */
+
+/* task and locker */
+
+.taskManage .locker_Form{
+  margin: 10px auto;
+} 
+
+/* task and locker */
+
+/* task and locker */
+
+.taskManage .check_bttn{
+  margin-left: 100px;
+}
+
+.taskManage ul {
+  
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.taskManage, .tableLocker h2{
+  padding: 3rem ;
+  font-size: 3rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.taskManage, .tableLocker .open-button {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+/* task and locker */
+
+
+
+/* tables */
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+  width: 100%; /* You can adjust the width based on your design */
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+tr:nth-child(odd){
+  background-color: #faf5b1
+}
+
+tr:hover {
+  background-color: rgb(178, 235, 236);
+}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+  white-space: nowrap;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="number"], input[type="time"],  select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* tables */
+
+/* search */
+
+.search_bar {
+  width: 100%;
+  text-align: center;
+  padding: 15px 15px;
+}
+
+/* search */
+
+/* SIDEBAR STAFF */
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--sub-color);
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+.sidebar .top {
+  width: auto;
+  display: flex;
+  right: 0;
+}
+
+.sidebar .top .logo {
+  color: sandybrown;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5rem;
+}
+
+.sidebar .top .logo2 {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.top .logo2 i {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.sidebar ul {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  list-style-type: none;
+  margin: 0 auto;
+  line-height: 50px;
+  gap: 0.5rem;
+}
+
+.sidebar ul li {
+  padding: 10px 10px;
+
+}
+
+
+.sidebar ul a {
+  font-size: 1.5rem;
+  color: #fff;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 0.8rem;
+}
+
+.sidebar ul a:hover {
+  background-color: #fff;
+  color: rgb(0, 68, 11);
+}
+
+.sidebar ul a i {
+  min-width: 2rem; /*the spacing between the icon and the name*/
+  text-align: center;
+  border-radius: 12px;
+  line-height: 50px;
+}
+
+.main-content {
+  position: relative;
+  background-color: #eee;
+  height: 100%;
+  top: 0;
+  left: 80px;
+  transition: all 0.5s ease;
+  width: 100%;
+  padding: 1rem;
+}
+
+.staffpage-container {
+  margin-top: 100px;
+
+}
+
+/* SIDEBAR STAFF */
+
+/* DASHBOARD */
+
+.container h1 {
+  padding: 10px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard_chart {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+}
+
+
+
+.dashboard_chart:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.eventCalendar {
+  margin: 20px;
+}
+
+.charts {
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+
+/* DASHBOARD */
+
+
+/* MAIN PAGE FOR STAFFS */
+
+.mainStaff {
+  background-color: var(--main-color);
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* MAIN PAGE FOR STAFFS */
+
+
+/* ANNOUNCEMENT VIEW - VISITORS */
+
+
+
+/* ANNOUNCEMENT VIEW - VISITORS */
+
+
+
+/* PAYMENT VIEW - VISITORS */
+
+/* Modal Content/Box */
+.popup {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    display: none; /* Hide the form by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the form */
+    width: 50%; /* Adjust width as needed */
+    height: 50%; /* Adjust height as needed */
+}
+/* PAYMENT VIEW - VISITORS */
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width: 991px) {
+
+  html {
+      font-size: 55%;
+  }
+
+  .bx-menu {
+      display: inline-block;
+  }
+
+  .header .navbar{
+      padding: 1rem 3rem;
+      flex-flow: column;
+      display: none;
+  }
+
+  .header .navbar.active {
+      display: inline-block;
+  }
+
+  .banner {
+      width: auto;
+      height: auto;
+  }
+
+}
+
+/* Medium-sized screens */
+@media (max-width: 991px) and (min-width: 769px) {
+  table {
+    width: 80%; /* You can adjust the width based on your design */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .footer-content {
+      width: 80%;
+  }
+
+  
+  table {
+    width: 100%; /* You can adjust the width based on your design */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .header .navbar{
+      display: none;
+  }
+
+  .header .flex .logo{
+      font-size: 1.5rem;
+  }
+}

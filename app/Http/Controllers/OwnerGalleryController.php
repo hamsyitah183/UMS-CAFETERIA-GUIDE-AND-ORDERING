@@ -102,8 +102,10 @@ class OwnerGalleryController extends Controller
             'type' => 'gallery',
             'style' => [
                 // 'admin/adminDashboard',
-                'owner/ownerDashboard',
+                'admin/adminDashboard',
+                
                 'owner/ownerViewMenuDetails'
+                
             ],
             'gallery' => $gallery
 

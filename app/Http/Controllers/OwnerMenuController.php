@@ -108,6 +108,7 @@ class OwnerMenuController extends Controller
     public function edit(Menu $menu)
     {
         //
+
         return view('UMS.dashboard.menu.OwnerMenuEdit', [
             'type'=>'menu',
             'style' => [
@@ -129,6 +130,7 @@ class OwnerMenuController extends Controller
     public function update(Request $request, Menu $menu)
     {
         //
+       
         $validatedData = $request->validate([
             'name' => 'required',
             'price' => 'required',
@@ -149,8 +151,10 @@ class OwnerMenuController extends Controller
             $validatedData['image'] = $request->file('image')->store('post-images');
         }
 
+       
+
         Menu::where('id', $menu->id)->update($validatedData);
-        return redirect('dashboard/menu/ /all')->with('success', 'A menu is updated');
+        return redirect('dashboard/menu/'. $menu->id)->with('success', 'A menu is updated');
     }
 
     /**

@@ -23,21 +23,28 @@
     if(Str::contains(url()->previous(), 'dashboard/menu/list/breakfast')) {
             $icon = 'ri-sun-foggy-line';
             $name = 'Breakfast';
+            $back = '/dashboard/menu/list/breakfast';
         }
 
         elseif(Str::contains(url()->previous(), 'dashboard/menu/list/lunch')) {
             $icon = 'ri-sun-line';
             $name = 'Lunch';
+            $back = '/dashboard/menu/list/lunch';
+
         }
 
         elseif(Str::contains(url()->previous(), 'dashboard/menu/list/drink')) {
             $icon = 'bi bi-cup-straw';
             $name = 'Drink';    
+            $back = '/dashboard/menu/list/drinks';
+
         }
 
         elseif(Str::contains(url()->previous(), 'dashboard/menu/list/all')) {
             $icon = 'ri-restaurant-line';
             $name = 'Menu';
+            $back = '/dashboard/menu/list/all';
+
         }
 
         else {
@@ -70,7 +77,7 @@
    
     {{-- @dd(url()->previous()) --}}
 
-    <button class="btn"><a href="{{ url()->previous() }}">See {{ $name }} list</a></button>
+    <button class="btn"><a href="{{ $back }}">See {{ $name }} list</a></button>
 </div>
 
 

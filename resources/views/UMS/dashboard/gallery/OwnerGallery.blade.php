@@ -60,9 +60,14 @@
             <div class="activity">
                 <button class="btn view"><a href="/dashboard/gallery/{{ $gallery->id }}"><i class="bi bi-eye"></i> View</a></button>
 
-                <div class="right">
-                    <button class="btn edit"><a href=""><i class="bi bi-pencil-square"></i> Edit</a></button>
-                    <button class="btn delete"><a href=""><i class="bi bi-trash"></i> Delete</a></button>
+                <div class="right" style="display: flex; gap: 10px;">
+                    <button class="btn edit"><a href="/dashboard/gallery/{{ $gallery->id }}/edit"><i class="bi bi-pencil-square"></i> Edit</a></button>
+                    <form action="/dashboard/gallery/{{ $gallery->id }}" method="post">
+                        @method('delete')
+                        @csrf
+                        <button type="submit" class="btn delete" onclick="return confirm('Are you sure you want to delete an item?')"><i class="bi bi-trash"></i> Delete</button>
+            
+                    </form>
                 </div>
             </div>
         </div>

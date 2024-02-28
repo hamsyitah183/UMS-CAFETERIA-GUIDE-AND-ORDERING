@@ -187,6 +187,7 @@ Route::middleware(['auth'])->group(function() {
 
 
     Route::resource('/dashboard/menu', OwnerMenuController::class)->middleware('userAccess:owner');
+    Route::get('/dashboard/menu/todayPick/edit', [OwnerMenuController::class, 'edit'])->middleware('userAccess:owner');
     Route::resource('/dashboard/customer', AdminCustomerController::class);
     Route::resource('/dashboard/owner', AdminOwnerController::class);
     Route::resource('/dashboard/payment', OwnerPaymentController::class);
@@ -226,7 +227,7 @@ Route::middleware(['auth'])->group(function() {
     Route::post('/dashboard/request', [UserRequestController::class, 'store']);
 
     
-
+    Route::put('/dashboard/menu/{menu:id}', [OwnerMenuController::class,'update']);
 
     // mesti di bawah ni
     Route::get('/dashboard/{menu:category}', [OwnerMenuController::class, 'category']);

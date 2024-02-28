@@ -37,9 +37,10 @@
     <section class="promo" id="promo">
         {{-- @dd($foodOption->post->where('Category', 'Promo')->first()) --}}
         <div class="promo__container container">
-            <h1>Our post</h1> <p><a href=""><i class="ri-timeline-view"></i> View all</a></p>
+            <h1>Our post</h1> <p><a href="/individual/{{ $foodOption->id }}/post"><i class="ri-timeline-view"></i> View all</a></p>
 
             <div class="posts">
+            
                 @if (count($foodOption->post) > 0)
                     <div class="post">
                         <div class="img">

@@ -44,7 +44,7 @@
         $items = $drinks;
         $icon = 'bi bi-cup-straw';
         $name = 'Drink';
-        $back = '/dashboard/drink';
+        $back = '/dashboard/drinks';
     @endphp
 
 

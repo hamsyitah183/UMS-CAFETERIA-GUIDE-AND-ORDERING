@@ -6,7 +6,7 @@
     <div class="topContent">
         <div class="icon">
             <button class="back">
-                <a href="/dashboard/owner/ownerView.html">
+                <a href="/dashboard/owner/">
                     <i class="bi bi-x"></i>
                     <span class="word">Cancel</span>
                 </a>

@@ -41,7 +41,7 @@ class AdminAnnouncementController extends Controller
             ]);
         }
 
-        elseif($userRole == 'owner') {
+        else {
             return view('UMS.dashboard.announcement.index', [
             
                 'style' => [

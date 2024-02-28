@@ -56,7 +56,7 @@
               <!--=============== DROPDOWN 1 ===============-->
               <li class="dropdown__item">
                  <div class="nav__link">
-                    Dining Option <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    Food places <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                  </div>
 
                  <ul class="dropdown__menu">
@@ -91,7 +91,7 @@
               <li><a href="/about" class="nav__link">About us</a></li>
 
               <!-- cart -->
-              @if (auth()->check())
+              @if (auth()->check() && auth()->user()->role == 'customer')
                 @include('UMS.partials.cart')
               @endif
 
